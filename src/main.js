@@ -4,6 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import { setupCalendar, Calendar} from 'v-calendar'
+import 'v-calendar/lib/v-calendar.min.css';
+
+// Remember to setup calendar (passing in defaults if needed)
+setupCalendar({
+  firstDayOfWeek: 2 // Monday,
+  // ...,                // ...other defaults
+});
+
+// Register component(s)
+Vue.component('v-calendar', Calendar);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
