@@ -2,21 +2,20 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import HeaderComponent from './shared/components/HeaderComponent'
 import router from './router'
 
-import { setupCalendar, Calendar} from 'v-calendar'
+Vue.config.productionTip = false
+
+import VCalendar from 'v-calendar';
 import 'v-calendar/lib/v-calendar.min.css';
 
-// Remember to setup calendar (passing in defaults if needed)
-setupCalendar({
-  firstDayOfWeek: 2 // Monday,
-  // ...,                // ...other defaults
+// Use v-calendar, v-date-picker & v-popover components
+Vue.use(VCalendar, {
+	locale: 'en',
+	firstDayOfWeek: 1,
+	paneWidth: 600
 });
-
-// Register component(s)
-Vue.component('v-calendar', Calendar);
-
-Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
