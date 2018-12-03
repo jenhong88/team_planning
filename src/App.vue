@@ -2,624 +2,23 @@
   <div id="app" class="nav-md theme-green">
 <!--     <HeaderComponent/>
     <router-view/> -->
+
     <div class="main-container">
 
         <!-- sidebar -->
-        <div class="sidebar">
-            <div class="scroll-wrapper">
-                <div class="navbar nav-title">
-                    <a href="index.html" class="site-title navbar-brand site-logo">
-                        <span class="icon-admin-logo"></span>
-                    </a>
-                </div>
-                <div class="nav toggle">
-                    <a href="javascript:void(0)" id="sidebar-menu-toggle" class="btn btn-circle ripple">
-                       <i class="fa fa-times"></i>
-                    </a>
-                </div>
-                <div class="clearfix"></div>
-                <!-- menu profile quick info -->
-                <div class="profile clearfix">
-                    <div class="profile-pic">
-                        <img src="img/avatar.png" alt="Profile picture" class="rounded-circle profile-img">
-                    </div>
-                    <div class="profile-info">
-                        <h2>James Mcavoy</h2>
-                    </div>
-                </div>
-                <!-- /menu profile quick info -->
-        
-                <!-- search -->
-                <div class="search-wrap d-sm-none clearfix text-center">
-                    <form action="" autocomplete="on">
-                        <input class="search" name="search" type="text" placeholder="What're we looking for?">
-                        <div>
-                            <button class="search-submit" value="Rechercher" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <!-- /search -->
-        
-                <!-- sidebar menu -->
-                <div id="sidebar-menu" class="main-menu-wrapper">
-                    <div class="menu-section">
-                        <ul class="nav side-menu flex-column">
-                            <li class="nav-item">
-                                <a href="index.html" title="Dashboard">
-                                    <i class="fa fa-home" aria-hidden="true"></i>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="UI Elements">
-                                    <i class="fa fa-desktop" aria-hidden="true"></i>
-                                    <span>UI Elements</span>
-                                    <span class="fa fa-chevron-right"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">UI Elements</li>
-                                    <li><a href="ui-colors.html">Colors</a></li>
-                                    <li><a href="ui-typography.html">Typography</a></li>
-                                    <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-cards.html">Cards</a></li>
-                                    <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
-                                    <li><a href="ui-modals.html">Modals</a></li>
-                                    <li><a href="ui-progress-bars.html">Progress Bars</a></li>
-                                    <li><a href="ui-notifications.html">Notifications</a></li>
-                                    <li><a href="ui-images.html">Images</a></li>
-                                    <li><a href="ui-carousel.html">Carousel</a></li>
-                                    <li><a href="ui-sliders.html">Sliders</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="Tables">
-                                    <i class="fa fa-table" aria-hidden="true"></i>
-                                    <span>Tables</span>
-                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">Tables</li>
-                                    <li><a href="basic-tables.html">Basic Tables</a></li>
-                                    <li><a href="data-tables.html">Data Tables</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="Icons">
-                                    <i class="fa fa-clone" aria-hidden="true"></i>
-                                    <span>Icons</span>
-                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">Icons</li>
-                                    <li><a href="icons-material.html">Material Design</a></li>
-                                    <li><a href="icons-fontawesome.html">Font awesome</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="Forms">
-                                    <i class="fa fa-edit" aria-hidden="true"></i>
-                                    <span>Forms</span>
-                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">Forms</li>
-                                    <li><a href="form-general.html">General Elements</a></li>
-                                    <li><a href="form-advanced.html">Advanced Components</a></li>
-                                    <li><a href="form-layouts.html">Form Layouts</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="Extras">
-                                    <i class="fa fa-windows" aria-hidden="true"></i>
-                                    <span>Extras</span>
-                                    <span class="fa fa-chevron-right"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">Extras</li>
-                                    <li><a href="403-error.html">403 Error</a></li>
-                                    <li><a href="404-error.html">404 Error</a></li>
-                                    <li><a href="500-error.html">500 Error</a></li>
-                                    <li><a href="invoice.html">Invoice</a></li>
-                                    <li class="has-child">
-                                        <a href="javascript:void(0);" title="Login">
-                                            <span>Login</span>
-                                            <span class="fa fa-chevron-right"></span>
-                                        </a>
-                                        <ul class="nav child-menu">
-                                            <li><a href="login.html">Login V1</a></li>
-                                            <li><a href="loginV2.html">Login V2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-child">
-                                        <a href="javascript:void(0);" title="Register">
-                                            <span>Register</span>
-                                            <span class="fa fa-chevron-right"></span>
-                                        </a>
-                                        <ul class="nav child-menu">
-                                            <li><a href="register.html">Register V1</a></li>
-                                            <li><a href="registerV2.html">Register V2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="lockscreen.html">Lockscreen</a></li>
-                                    <li><a href="recover-password.html">Recover Password</a></li>
-                                    <li><a href="user-profile.html">User Profile</a></li>
-                                    <li class="has-child">
-                                        <a href="javascript:void(0);">
-                                            <span>Email Templates</span>
-                                            <span class="fa fa-chevron-right"></span>
-                                        </a>
-                                        <ul class="nav child-menu">
-                                            <li><a href="email-template-basic.html">Email Template Basic</a></li>
-                                            <li><a href="email-template-alert.html">Email Template Alert</a></li>
-                                            <li><a href="email-template-billing.html">Email Template Billing</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-child">
-                                <a href="javascript:void(0);" class="ripple" title="Menu levels">
-                                    <i class="fa fa-level-down" aria-hidden="true"></i>
-                                    <span>Menu levels</span>
-                                    <span class="fa fa-chevron-right"></span>
-                                </a>
-                                <ul class="nav child-menu">
-                                    <li class="child-menu-title">Menu levels</li>
-                                    <li><a href="javascript:void(0);" title="Menu levels">
-                                        <span>Menu Level 1.1</span>
-                                    </a></li>
-                                    <li class="has-child">
-                                        <a href="javascript:void(0);">
-                                            <span>Menu Level 1.2</span>
-                                            <span class="fa fa-chevron-right"></span>
-                                        </a>
-                                        <ul class="nav child-menu">
-                                            <li><a href="javascript:void(0);" title="Menu levels">Menu Level 2.1</a></li>
-                                            <li class="has-child">
-                                                <a href="javascript:void(0);">
-                                                    <span>Menu Level 2.2</span>
-                                                    <span class="fa fa-chevron-right"></span>
-                                                 </a>
-                                                <ul class="nav child-menu">
-                                                    <li><a href="javascript:void(0);">Menu Level 3.1</a></li>
-                                                    <li><a href="javascript:void(0);">Menu Level 3.2</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="documentation.html" title="Documentation">
-                                    <i class="fa fa-file-text" aria-hidden="true"></i>
-                                    <span>Documentation</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /sidebar menu -->
-            </div>
-        </div>
+        <!-- //= partials/sidebar.html -->
+        <Sidebar/>
         <!-- /sidebar -->
 
         <div class="content-wrapper">
 
             <!-- header content  -->
-            <header class="header">
-                <nav class="header-menu">
-                    <div class="nav toggle">
-                        <a href="javascript:void(0)" id="menu-toggle" class="ripple">
-                            <span class="bars"></span>
-                        </a>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="search-wrap d-sm-none d-md-block">
-                            <form action="" autocomplete="on">
-                                <input type="text" name="search" class="search" placeholder="What're we looking for?">
-                                <div>
-                                    <button class="search-submit" value="" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </form>
-                        </li>
-                        <li role="presentation" class="dropdown notifications-list">
-                            <a href="javascript:void(0)" class="dropdown-toggle info-number ripple" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-bell-o"></i>
-                                <span class="badge">6</span>
-                            </a>
-                            <ul id="menu" class="dropdown-menu list-unstyled dropdown-menu-lg" role="menu">
-                                <li class="notif-title"> Notifications
-                                    <button type="button" class="float-right close btn btn-circle d-none d-block-xs"><i class="fa fa-close"></i></button>
-                                </li>
-                                <li class="list-group notification-list">
-                                  <ul class="p-0">
-                                      <!-- list item-->
-                                      <li class="list-group-item">
-                                          <a href="javascript:void(0);">
-                                              <div class="m-r-10 notif-img float-left">
-                                                  <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
-                                              </div>
-                                              <div class="notif-info"><p class="text-danger notif-text">98% Server Load</p>
-                                                  <time class="float-right">12 min ago</time>
-                                              </div>
-                                          </a>
-                                      </li>
-                                      <!-- list item-->
-                                      <li class="list-group-item">
-                                          <a href="javascript:void(0);">
-                                              <div class="m-r-10 notif-img float-left">
-                                                  <i class="fa fa-exclamation-triangle text-warning " aria-hidden="true"></i>
-                                              </div>
-                                              <div class="notif-info"><p class="text-warning notif-text">Warning Notification</p>
-                                                  <time class="float-right">12 min ago</time>
-                                              </div>
-                                          </a>
-                                      </li>
-                                      <!-- list item-->
-                                      <li class="list-group-item">
-                                          <a href="javascript:void(0);">
-                                              <div class="m-r-10 notif-img float-left">
-                                                  <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
-                                              </div>
-                                              <div class="notif-info"><p class="text-success notif-text">Success Notification</p>
-                                                <time class="float-right">12 min ago</time>
-                                              </div>
-                                          </a>
-                                      </li>
-            
-                                  </ul>
-                                </li>
-                                <li class="read-all-notif"><a href="javascript:void(0)">Read all notifications<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </li>
-                        <li class="profile-dropdown dropdown">
-                            <a href="javascript:void(0)" class="user-profile dropdown-toggle ripple" data-toggle="dropdown" aria-expanded="false">
-                                <img src="img/avatar.png" alt="Profile picture" class="rounded-circle">
-                                <span class="d-none d-sm-block">James Mcavoy</span>
-                                <span class="fa fa-angle-down"></span>
-                            </a>
-                            <ul class="dropdown-menu float-right">
-                                <li class="d-none d-block-xs p-0">
-                                    <button type="button" class="close btn btn-circle"><i class="fa fa-close"></i></button>
-                                    <div class="profile clearfix">
-                                        <div class="profile-pic">
-                                            <img src="img/avatar.png" alt="Profile picture" class="rounded-circle profile-img">
-                                        </div>
-                                        <div class="profile-info">
-                                            <h2>James Mcavoy</h2>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="user-profile.html"><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
-                                <li><a href="lockscreen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock screen</a></li>
-                                <li class="divider"></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <!-- //= partials/header.html -->
+            <HeaderComponent/>
             <!-- /header content -->
 
             <!-- theme settings-->
-            <div class="settings-wrapper builder d-none d-md-block" id="builder">
-                <div class="p-l-20 p-r-30">
-                    <a id="builder-close" class="builder-close settings-toggle" href="javascript:void(0)" title="Close">
-                        <i class="fa fa-close" aria-hidden="true"></i>
-                    </a>
-                    <a id="builder-toggle" class="builder-toggle" title="Settings">
-                        <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
-                    </a>
-            
-                    <ul class="nav nav-tabs nav-tabs-simple nav-tabs-simple-bottom nav-justified" id="settingsTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="layouts-tab" data-toggle="tab" href="#layouts" role="tab" aria-controls="layouts" aria-expanded="true">Layout settings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="colors-tab" data-toggle="tab" href="#colors" role="tab" aria-controls="colors" aria-expanded="false">Custom Colors</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="settingsTabContent">
-                        <div role="tabpanel" class="tab-pane fade active show" id="layouts" aria-labelledby="layouts-tab" aria-expanded="true">
-                            <div class="scroll-wrapper">
-                                <div class="scroll-content">
-                                    <div class="p-r-20">
-                                        <h5 class="semi-bold">
-                                            Layout color options
-                                        </h5>
-                                        <div class="sidebar-settings m-b-10">
-                                            <p class="hint-text mb-0">
-                                                Sidebar color.
-                                            </p>
-                                            <button type="button" class="btn btn-outline-primary btn-activate-sidebar mt-2 active" title="Light Sidebar" id="activate-light-sidebar">
-                                                Light
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-activate-sidebar mt-2" title="Dark Sidebar" id="activate-dark-sidebar">
-                                                Dark
-                                            </button>
-                                        </div>
-                                        <div class="header-settings m-b-10">
-                                            <p class="hint-text mb-0">
-                                                Header color.
-                                            </p>
-                                            <button type="button" class="btn btn-outline-info btn-activate-header mt-2" title="Light Header" id="activate-light-header">
-                                                Light
-                                            </button>
-                                            <button type="button" class="btn btn-outline-info btn-activate-header mt-2 active" title="Dark Header" id="activate-dark-header">
-                                                Dark
-                                            </button>
-                                        </div>
-            
-                                        <div class="m-b-10">
-                                            <p class="hint-text mb-0">
-                                                Main color of your theme
-                                            </p>
-                                            <button type="button" class="btn btn-outline-green btn-activate-color btn-raised mt-2 btn-circle active" id="activate-green" title="Green">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-purple btn-activate-color btn-raised mt-2 btn-circle" id="activate-purple" title="Purple">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-red btn-activate-color btn-raised mt-2 btn-circle" id="activate-red" title="Red">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-cyan btn-activate-color btn-raised mt-2 btn-circle" id="activate-cyan" title="Cyan">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-orange btn-activate-color btn-raised mt-2 btn-circle" id="activate-orange" title="Orange">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-grey btn-activate-color btn-raised mt-2 btn-circle" id="activate-grey" title="Grey">
-                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                            </button>
-                                            <p class="hint-text mt-2">Pick a Custom Theme Color</p>
-                                            <input class="jscolor form-control btn-activate-color d-inline-block" id="activate-custom" value="4DD0E1" title="Pick a custom theme color">
-                                        </div>
-                                        <h5 class="semi-bold">
-                                            Layout view options
-                                        </h5>
-                                        <div class="row p-b-35">
-                                            <div class="col-md-12 col-lg-12">
-                                                <div class="card box-shadow-none">
-                                                    <div class="card-body p-0">
-                                                        <h5 class="card-title hint-text">Fixed full width header</h5>
-                                                        <div class="ml-auto mr-auto layout-view layout-view-fixed-header d-flex align-items-center justify-content-center"
-                                                             id="activate-fixed-header"
-                                                             title="Activate Fixed Full Width Header">
-                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-md-12 col-lg-12">
-                                                <div class="card box-shadow-none">
-                                                    <div class="card-body p-0">
-                                                        <h5 class="card-title hint-text">Left sidebar</h5>
-                                                        <div class="ml-auto mr-auto layout-view active layout-view-left-sidebar d-flex align-items-center justify-content-center"
-                                                             id="activate-left-sidebar"
-                                                             title="Activate Left Sidebar">
-                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-md-12 col-lg-12">
-                                                <div class="card box-shadow-none">
-                                                    <div class="card-body p-0">
-                                                        <h5 class="card-title hint-text">Right sidebar</h5>
-                                                        <div class="ml-auto mr-auto layout-view layout-view-right-sidebar d-flex align-items-center justify-content-center"
-                                                             id="activate-right-sidebar"
-                                                             title="Activate Right Sidebar">
-                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-md-12 col-lg-12">
-                                                <div class="card box-shadow-none">
-                                                    <div class="card-body p-0">
-                                                        <h5 class="card-title hint-text">RTL Content</h5>
-                                                        <div class="ml-auto mr-auto layout-view layout-view-rtl-content d-flex align-items-center justify-content-center"
-                                                             id="activate-rtl-content"
-                                                             title="Activate RTL Content">
-                                                            <button type="button" class="card-link btn btn-theme btn-activate activate-rtl mt-2"></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="colors" role="tabpanel" aria-labelledby="colors-tab" aria-expanded="false">
-                            <div class="scroll-wrapper">
-                                <div class="scroll-content">
-                                    <div>
-                                        <h5 class="semi-bold">
-                                            Color Options
-                                        </h5>
-                                        <p class="hint-text">
-                                            Customize colors of your theme.
-                                        </p>
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a primary background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="primary-color" value="6d5cae" title="Pick a primary background color">
-                                                        <label>Pick a primary text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="primary-text-color" value="ffffff" title="Pick a primary text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                      <button class="btn mt-1 btn-prev" id="btn-primary-prev" title="Preview of primary color">Primary</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a secondary background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="secondary-color" value="cfd0d2" title="Pick a secondary background color">
-                                                        <label>Pick a secondary text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="secondary-text-color" value="ffffff" title="Pick a secondary text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-secondary-prev" title="Preview of secondary color">Secondary</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a success background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="success-color" value="0aa89e" title="Pick a success background color">
-                                                        <label>Pick a success text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="success-text-color" value="ffffff" title="Pick a success text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-success-prev" title="Preview of success color">Success</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-            
-            
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a info background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="info-color" value="4DD0E1" title="Pick a info background color">
-                                                        <label>Pick a info text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="info-text-color" value="ffffff" title="Pick a info text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-info-prev" title="Preview of info color">Info</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-            
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a warning background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="warning-color" value="ffaa00" title="Pick a warning background color">
-                                                        <label>Pick a warning text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="warning-text-color" value="ffffff" title="Pick a warning text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-warning-prev" title="Preview of warning color">Warning</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-            
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a danger background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="danger-color" value="e43a45" title="Pick a danger background color">
-                                                        <label>Pick a danger text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="danger-text-color" value="ffffff" title="Pick a danger text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-danger-prev" title="Preview of danger color">Danger</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-            
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a light background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="light-color" value="eaeef3" title="Pick a light background color">
-                                                        <label>Pick a light text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="light-text-color" value="8e959d" title="Pick a light text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-light-prev" title="Preview of light color">Light</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-            
-                                        <div class="row mb-2">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between align-items-center color-settings-row p-l-5 p-r-5">
-                                                    <div>
-                                                        <label>Pick a dark background color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="dark-color" value="8e959d" title="Pick a dark background color">
-                                                        <label>Pick a dark text color</label>
-                                                        <input class="jscolor {position:'left'} form-control" id="dark-text-color" value="ffffff" title="Pick a dark text color">
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button class="btn mt-1 btn-prev" id="btn-dark-prev" title="Preview of dark color">Dark</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fixed-bottom-buttons">
-                        <div class="mt-2">
-                            <button type="button" id="btnOpenSaveSettingsModal" class="btn btn-theme btn-raised" data-toggle="modal" data-target="#save-settings-modal" title="Save Settings">
-                                <i class="fa fa-check left" aria-hidden="true"></i><span>Save</span>
-                            </button>
-                            <button type="button" class="btn btn-theme btn-raised" id="btnPrevSettings" title="Preview Settings">
-                                <i class="fa fa-clone left" aria-hidden="true"></i><span>Preview</span>
-                            </button>
-                            <button type="button" class="btn btn-light btn-raised" id="btnCancelSettings" title="Cancel Settings">
-                                <i class="fa fa-ban left" aria-hidden="true"></i><span>Cancel</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Settings Modal -->
-            <div class="modal fade" id="save-settings-modal" tabindex="-1" role="dialog" aria-labelledby="SaveModal" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="SaveModal">Save Settings</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <p>If you want to get this view in the project, you should change <code>body</code> classlist to this</p>
-                                <p id="customized-body-classlist" class="font-weight-bold"></p>
-                            </div>
-                           <div>
-                               <p>If you want to use these colors in the template, you should find and replace the code of this file <span class="text-success">src/sass/partials/default-colors.sass</span> to this code</p>
-                               <p id="customized-css" class="font-weight-bold"></p>
-                           </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-theme" id="btnSaveSettings">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- //= settings/theme-settings.html -->
             <!-- /theme settings -->
 
             <!-- page content -->
@@ -811,7 +210,7 @@
                                                 </div>
                                                 <div class="m-t-40">
                                                     <div class="float-left mr-3">
-                                                        <img src="img/user-1.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
+                                                        <img src="./assets/img/user-1.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
                                                     </div>
                                                     <div class="text-left">
                                                         <h6 class="m-0 hint-text">
@@ -827,7 +226,7 @@
                                                 </div>
                                                 <div class="m-t-40">
                                                     <div class="float-left mr-3">
-                                                        <img src="img/user-2.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
+                                                        <img src="./assets/img/user-2.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
                                                     </div>
                                                     <div class="text-left">
                                                         <h6 class="m-0 hint-text">
@@ -843,7 +242,7 @@
                                                 </div>
                                                 <div class="m-t-40">
                                                     <div class="float-left mr-3">
-                                                        <img src="img/user-3.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
+                                                        <img src="./assets/img/user-3.png" alt="" class="rounded-circle profile-img" style="width: 44px; height: 44px;">
                                                     </div>
                                                     <div class="text-left">
                                                         <h6 class="m-0 hint-text">
@@ -938,7 +337,7 @@
                                 <li class="list-group-item border-0" data-role="newregistrationslist">
                                     <a href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="img-wrapper float-left"><img src="img/user-1.png" class="rounded-circle"></div>
+                                            <div class="img-wrapper float-left"><img src="./assets/img/user-1.png" class="rounded-circle"></div>
                                             <div class="d-flex w-100 justify-content-between align-items-center">
                                                 <h5>Richard Cook</h5>
                                                 <button type="button" class="btn"><i class="fa fa-ban"></i></button>
@@ -949,7 +348,7 @@
                                 <li class="list-group-item border-0" data-role="newregistrationslist">
                                     <a href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="img-wrapper float-left"><img src="img/user-3.png" class="rounded-circle"></div>
+                                            <div class="img-wrapper float-left"><img src="./assets/img/user-3.png" class="rounded-circle"></div>
                                             <div class="d-flex w-100 justify-content-between align-items-center">
                                                 <h5>Richard Sevian</h5>
                                                 <button type="button" class="btn"><i class="fa fa-ban"></i></button>
@@ -960,7 +359,7 @@
                                 <li class="list-group-item border-0" data-role="newregistrationslist">
                                     <a href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="img-wrapper float-left"><img src="img/user-2.png" class="rounded-circle"></div>
+                                            <div class="img-wrapper float-left"><img src="./assets/img/user-2.png" class="rounded-circle"></div>
                                             <div class="d-flex w-100 justify-content-between align-items-center">
                                                 <h5>Samuel Nelson</h5>
                                                 <button type="button" class="btn"><i class="fa fa-ban"></i></button>
@@ -971,7 +370,7 @@
                                 <li class="list-group-item border-0" data-role="newregistrationslist">
                                     <a href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="img-wrapper float-left"><img src="img/user-4.png" class="rounded-circle"></div>
+                                            <div class="img-wrapper float-left"><img src="./assets/img/user-4.png" class="rounded-circle"></div>
                                             <div class="d-flex w-100 justify-content-between align-items-center">
                                                 <h5>Mary Cruise</h5>
                                                 <button type="button" class="btn"><i class="fa fa-ban"></i></button>
@@ -982,7 +381,7 @@
                                 <li class="list-group-item border-0" data-role="newregistrationslist">
                                     <a href="#">
                                         <div class="d-flex align-items-center">
-                                            <div class="img-wrapper float-left"><img src="img/user-5.png" class="rounded-circle"></div>
+                                            <div class="img-wrapper float-left"><img src="./assets/img/user-5.png" class="rounded-circle"></div>
                                             <div class="d-flex w-100 justify-content-between align-items-center">
                                                 <h5>Jessica Anderson</h5>
                                                 <button type="button" class="btn"><i class="fa fa-ban"></i></button>
@@ -1054,33 +453,32 @@
             <!-- /page content -->
     
             <!-- footer content -->
-            <footer class="footer">
-                <div class="float-right">
-                    Admin Template by <a href="javascript:void(0)" class="company-name text-theme">
-                    <span class="icon-admin-logo"></span>
-                </a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            
+            <!-- //= partials/footer.html -->
             <!-- /footer content -->
 
         </div>
     </div>
+
+<!-- site foot -->
+<!-- //= partials/site-foot.html -->
+<!-- /site foot -->
   </div>
 </template>
 
 <script>
 import HeaderComponent from './shared/components/HeaderComponent'
+import Sidebar from './shared/components/Sidebar'
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    Sidebar
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/styles/sass/main.scss'
 
 </style>
