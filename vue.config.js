@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   test: /\.scss$/,
   use: [
@@ -12,5 +14,11 @@ module.exports = {
         `
       }
     }
-  ]
+  ],
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "scss",
+      patterns: [path.resolve(__dirname, "./assets/styles/sass/main.scss")]
+    }
+  }
 };

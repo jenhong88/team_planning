@@ -2,6 +2,14 @@
 
 > A Vue.js project
 
+Libraries
+
+vue-toastr
+https://github.com/Deveodk/vue-toastr
+
+v-calendar
+https://github.com/nathanreyes/v-calendar
+
 ## Build Setup
 
 ``` bash

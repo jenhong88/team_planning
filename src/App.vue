@@ -26,6 +26,7 @@
                 <div class="row bg-title clearfix page-title">
                     <div class="col-12 col-lg-3">
                         <h4 class="page-title">Welcome!</h4>
+                        <button v-on:click="showToastr">TOASTER</button>
                     </div>
 <!--                     <div class="col-12 col-lg-9">
                         <ol class="breadcrumb pl-0 pr-0 float-lg-right">
@@ -478,11 +479,19 @@ export default {
   components: {
     HeaderComponent,
     Sidebar
+  },
+  mounted: function () {
+      this.showToastr()
+   },
+  methods: {
+    showToastr: function () {
+        this.$toastr('success', 'it works!', 'Yeahh')
+    }
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './assets/styles/sass/main.scss'
 
 </style>

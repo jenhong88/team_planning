@@ -6,6 +6,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+import VueToastr from '@deveodk/vue-toastr'
 import VCalendar from 'v-calendar';
 
 // stylesheets
@@ -19,6 +20,9 @@ import './assets/styles/invoice.css';
 import './assets/styles/lockscreen.css';
 import './assets/styles/login-register.css';
 import './assets/styles/user-profile.css';
+// You need a specific loader for CSS files like https://github.com/webpack/css-loader
+// If you would like custom styling of the toastr the css file can be replaced
+import '@deveodk/vue-toastr/dist/@deveodk/vue-toastr.css'
 
 // libraries
 import './assets/js/charts.js';
@@ -32,6 +36,12 @@ Vue.use(VCalendar, {
 	firstDayOfWeek: 1,
 	paneWidth: 600
 });
+
+Vue.use(VueToastr, {
+    defaultPosition: 'toast-top-right',
+    defaultType: 'info',
+    defaultTimeout: 3000
+})
 
 /* eslint-disable no-new */
 new Vue({
