@@ -39,10 +39,12 @@
             <div class="menu-section">
                 <ul class="nav side-menu flex-column">
                     <li class="nav-item">
-                        <a href="index.html" title="Dashboard">
+                        <router-link :to="'/'">
+                        <a href="javascript:void(0);" title="Dashboard">
                             <i class="fa fa-home" aria-hidden="true"></i>
                             <span>Dashboard</span>
                         </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="'calendar'">
