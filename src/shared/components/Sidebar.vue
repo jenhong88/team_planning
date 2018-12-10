@@ -44,7 +44,21 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item has-child">
+                    <li class="nav-item">
+                        <router-link :to="'calendar'">
+                        <a href="javascript:void(0);" class="ripple" title="Tables">
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            <span>Calendar</span>
+                            <!-- <span class="fa fa-chevron-right" aria-hidden="true"></span> -->
+                        </a>
+                        </router-link>
+<!--                         <ul class="nav child-menu">
+                            <li class="child-menu-title">Tables</li>
+                            <li><a href="basic-tables.html">Basic Tables</a></li>
+                            <li><a href="data-tables.html">Data Tables</a></li>
+                        </ul> -->
+                    </li>
+<!--                     <li class="nav-item has-child">
                         <a href="javascript:void(0);" class="ripple" title="UI Elements">
                             <i class="fa fa-desktop" aria-hidden="true"></i>
                             <span>UI Elements</span>
@@ -64,20 +78,8 @@
                             <li><a href="ui-carousel.html">Carousel</a></li>
                             <li><a href="ui-sliders.html">Sliders</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item has-child">
-                        <a href="javascript:void(0);" class="ripple" title="Tables">
-                            <i class="fa fa-table" aria-hidden="true"></i>
-                            <span>Tables</span>
-                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <ul class="nav child-menu">
-                            <li class="child-menu-title">Tables</li>
-                            <li><a href="basic-tables.html">Basic Tables</a></li>
-                            <li><a href="data-tables.html">Data Tables</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-child">
+                    </li> -->
+<!--                     <li class="nav-item has-child">
                         <a href="javascript:void(0);" class="ripple" title="Icons">
                             <i class="fa fa-clone" aria-hidden="true"></i>
                             <span>Icons</span>
@@ -182,13 +184,13 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+<!--                     <li class="nav-item">
                         <a href="documentation.html" title="Documentation">
                             <i class="fa fa-file-text" aria-hidden="true"></i>
                             <span>Documentation</span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

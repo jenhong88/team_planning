@@ -27,15 +27,15 @@
                     <div class="col-12 col-lg-3">
                         <h4 class="page-title">Welcome!</h4>
                     </div>
-                    <div class="col-12 col-lg-9">
+<!--                     <div class="col-12 col-lg-9">
                         <ol class="breadcrumb pl-0 pr-0 float-lg-right">
                             <li><a href="index.html">Musa</a></li>
                             <li class="active">Dashboard</li>
                         </ol>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- top tiles -->
-                <div class="row tile-count">
+<!--                 <div class="row tile-count">
                     <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 tile-stats-count">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -96,10 +96,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /top tiles -->
 
-                <div class="row">
+<!--                 <div class="row">
                     <div class="col-12 col-xl-7 m-b-10">
                         <div class="h-100 w-100 bg-white padding-25 white-box">
                             <h4 class="box-title">Share statistics</h4>
@@ -447,10 +447,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <router-view/>
             </div>
 
             <!-- /page content -->
+
     
             <!-- footer content -->
             <!-- //= partials/footer.html -->
@@ -468,6 +470,8 @@
 <script>
 import HeaderComponent from './shared/components/HeaderComponent'
 import Sidebar from './shared/components/Sidebar'
+
+
 
 export default {
   name: 'App',
