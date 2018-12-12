@@ -60,6 +60,22 @@
                             <li><a href="data-tables.html">Data Tables</a></li>
                         </ul> -->
                     </li>
+                    <li class="nav-item">
+                        <router-link :to="'/boardlist'">
+                        <a href="javascript:void(0);" title="boardlist">
+                            <i class="fa fa-windows" aria-hidden="true"></i>
+                            <span>Boardlist</span>
+                        </a>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="'/add-board'">
+                        <a href="javascript:void(0);" title="add-board">
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                            <span>Add-Board</span>
+                        </a>
+                        </router-link>
+                    </li>
 <!--                     <li class="nav-item has-child">
                         <a href="javascript:void(0);" class="ripple" title="UI Elements">
                             <i class="fa fa-desktop" aria-hidden="true"></i>

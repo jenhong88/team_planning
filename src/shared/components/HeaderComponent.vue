@@ -1,9 +1,4 @@
 <template>
-<!--   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <router-link :to="'/'">Home</router-link>
-    <router-link :to="'calendar'">Calendar</router-link>
-  </div> -->
 <header class="header">
     <nav class="header-menu">
         <div class="nav toggle">
