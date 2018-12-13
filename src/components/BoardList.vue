@@ -7,7 +7,7 @@
       </h2>
       <b-table striped hover :items="boards" :fields="fields">
         <template slot="actions" scope="row">
-          <b-btn size="sm" @click.stop="details(row.item)">Details</b-btn>
+          <b-btn class="btn-success" size="sm" @click.stop="details(row.item);">Details</b-btn>
         </template>
       </b-table>
     </b-col>
@@ -15,27 +15,26 @@
 </template>
 
 <script>
-
-import firebase from '../Firebase'
-import router from '../router'
+import firebase from "../Firebase";
+import router from "../router";
 
 export default {
-  name: 'BoardList',
-  data () {
+  name: "BoardList",
+  data() {
     return {
       fields: {
-        title: { label: 'Title', sortable: true, 'class': 'text-left' },
-        actions: { label: 'Action', 'class': 'text-center' }
+        title: { label: "Title", sortable: true, class: "text-left" },
+        actions: { label: "Action", class: "text-center" }
       },
       boards: [],
       errors: [],
-      ref: firebase.firestore().collection('boards'),
-    }
+      ref: firebase.firestore().collection("events")
+    };
   },
-  created () {
-    this.ref.onSnapshot((querySnapshot) => {
+  created() {
+    this.ref.onSnapshot(querySnapshot => {
       this.boards = [];
-      querySnapshot.forEach((doc) => {
+      querySnapshot.forEach(doc => {
         this.boards.push({
           key: doc.id,
           title: doc.data().title
@@ -44,16 +43,16 @@ export default {
     });
   },
   methods: {
-    details (board) {
-      router.push({ name: 'ShowBoard', params: { id: board.key }})
+    details(board) {
+      router.push({ name: "ShowBoard", params: { id: board.key } });
     }
   }
-}
+};
 </script>
 
 <style>
-  .table {
-    width: 96%;
-    margin: 0 auto;
-  }
+.table {
+  width: 96%;
+  margin: 0 auto;
+}
 </style>
