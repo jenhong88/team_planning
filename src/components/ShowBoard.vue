@@ -39,7 +39,7 @@ export default {
   created() {
     const ref = firebase
       .firestore()
-      .collection("boards")
+      .collection("events")
       .doc(this.$route.params.id);
     ref.get().then(doc => {
       if (doc.exists) {
@@ -60,7 +60,7 @@ export default {
     deleteboard(id) {
       firebase
         .firestore()
-        .collection("boards")
+        .collection("events")
         .doc(id)
         .delete()
         .then(() => {
