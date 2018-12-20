@@ -46,6 +46,8 @@ Vue.use(VueToastr, {
     defaultTimeout: 3000
 })
 
+Vue.use(require('vue-moment'));
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
