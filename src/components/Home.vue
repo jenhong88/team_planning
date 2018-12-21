@@ -2,13 +2,15 @@
   <div class="hello">
     <header />
     <h1>{{ msg }}</h1>
-    <ul>
+    <button v-on:click="calculate">Calculate</button>
+<!--     <ul>
       <li v-for="entry in entries">
         {{ entry.draw_date | moment("MMMM Do YYYY") }}
         {{ entry.winning_numbers }}
         {{ entry.mega_ball }}
       </li>
-    </ul>
+    </ul> -->
+    <!-- <b-table striped hover :items="entries"></b-table> -->
   </div>
 </template>
 
@@ -34,6 +36,12 @@ export default {
       .catch(e => {
         this.errors.push(e);
       });
+  },
+  methods: {
+    calculate(){
+      const data = this.entries
+      console.warn(data)
+    }
   }
 };
 </script>

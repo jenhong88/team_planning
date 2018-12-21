@@ -26,7 +26,7 @@
                 <div class="row bg-title clearfix page-title">
                     <div class="col-12 col-lg-3">
                         <h4 class="page-title">Welcome!</h4>
-                        <button v-on:click="showToastr">TOASTER</button>
+                        <!-- <button v-on:click="showToastr">TOASTER</button> -->
                     </div>
 <!--                     <div class="col-12 col-lg-9">
                         <ol class="breadcrumb pl-0 pr-0 float-lg-right">
