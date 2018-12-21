@@ -53,15 +53,23 @@ export default {
       let fifth = 0;
       let mega = 0;
 
+      console.log(data);
+
       data.map(e => {
-        const { winning_numbers } = e;
+        const { winning_numbers, draw_date } = e;
         const splitNumbers = winning_numbers.split(" ");
-        first = parseInt(splitNumbers[0]) + first;
-        second = parseInt(splitNumbers[1]) + second;
-        third = parseInt(splitNumbers[2]) + third;
-        fourth = parseInt(splitNumbers[3]) + fourth;
-        fifth = parseInt(splitNumbers[4]) + fifth;
-        mega = parseInt(e.mega_ball) + mega;
+
+        if (
+          parseInt(draw_date.split("")[2]) === 1 &&
+          parseInt(draw_date.split("")[3]) >= 2
+        ) {
+          first = parseInt(splitNumbers[0]) + first;
+          second = parseInt(splitNumbers[1]) + second;
+          third = parseInt(splitNumbers[2]) + third;
+          fourth = parseInt(splitNumbers[3]) + fourth;
+          fifth = parseInt(splitNumbers[4]) + fifth;
+          mega = parseInt(e.mega_ball) + mega;
+        }
       });
       ave.first = first / data.length;
       ave.second = second / data.length;
