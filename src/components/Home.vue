@@ -3,16 +3,22 @@
     <header />
     <h1>{{ msg }}</h1>
     <button v-on:click="calculate">Calculate</button>
-    <!--
-      <ul>
-        <li v-for="entry in entries">
-          {{ entry.draw_date | moment("MMMM Do YYYY") }}
-          {{ entry.winning_numbers }}
-          {{ entry.mega_ball }}
-        </li>
-      </ul>
-    -->
-    <b-table striped hover :items="average"></b-table>
+
+    <ul>
+      <li v-for="entry in entries">
+        <!-- {{ entry.draw_date | moment("MMMM Do YYYY") }} -->
+        <!-- {{ entry.winning_numbers }} -->
+        <!-- {{ entry.mega_ball }} -->
+        <div>{{ entry.winning_numbers | first }}</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+    </ul>
+
+    <!-- <b-table striped hover :items="average"></b-table> -->
   </div>
 </template>
 
@@ -35,7 +41,25 @@ export default {
     axios
       .get(`https://data.ny.gov/resource/5xaw-6ayf.json`)
       .then(response => {
-        // JSON responses are automatically parsed.
+        const allEntries = response.data;
+
+        function colorCheck(num){
+          if(num >= 30){
+            return "high"
+          }else{
+            return "low"
+          }
+        }
+
+        allEntries.map(entry => {
+          const numbers = entry.winning_numbers;
+          entry.first = colorCheck(numbers.split(" ")[0]);
+          entry.second = numbers.split(" ")[1];
+          entry.third = numbers.split(" ")[2];
+          entry.fourth = numbers.split(" ")[3];
+          entry.fifth = numbers.split(" ")[4];
+          entry.mega = entry.mega_ball;
+        });
         this.entries = response.data;
       })
       .catch(e => {
@@ -52,8 +76,6 @@ export default {
       let fourth = 0;
       let fifth = 0;
       let mega = 0;
-
-      console.log(data);
 
       data.map(e => {
         const { winning_numbers, draw_date } = e;
@@ -78,6 +100,19 @@ export default {
       ave.fifth = fifth / data.length;
       ave.mega = mega / data.length;
     }
+  },
+  filters: {
+    first: function(value) {
+      const first = value.split(" ")[0];
+      return first;
+    },
+    color: function(value) {
+      if (value >= 30) {
+        return "high";
+      } else {
+        return "low";
+      }
+    }
   }
 };
 </script>
@@ -86,5 +121,11 @@ export default {
 <style scoped>
 ul {
   list-style: none;
+  text-align: center;
+}
+li {
+  font-size: 10px;
+  height: 12px;
+  widows: 100%;
 }
 </style>
