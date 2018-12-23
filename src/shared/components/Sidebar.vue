@@ -76,6 +76,14 @@
                         </a>
                         </router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link :to="'/lotto'">
+                        <a href="javascript:void(0);" title="lotto">
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                            <span>Lotto</span>
+                        </a>
+                        </router-link>
+                    </li>
 <!--                     <li class="nav-item has-child">
                         <a href="javascript:void(0);" class="ripple" title="UI Elements">
                             <i class="fa fa-desktop" aria-hidden="true"></i>

@@ -7,6 +7,7 @@ import BoardList from '@/components/BoardList'
 import ShowBoard from '@/components/ShowBoard'
 import AddBoard from '@/components/AddBoard'
 import EditBoard from '@/components/EditBoard'
+import Lotto from '@/components/Lotto'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/edit-board/:id',
       name: 'EditBoard',
       component: EditBoard
+    },
+    {
+      path: '/lotto',
+      name: 'Lotto',
+      component: Lotto
     }
   ]
 })
