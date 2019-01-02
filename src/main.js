@@ -19,7 +19,7 @@ Vue.use(VueGoogleMaps, {
     key: 'AIzaSyDoL3TdDlYcai33kONiuZlokxEDJgMapI4',
     libraries: 'places', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
-    // OR: libraries: 'places,drawing,visualization'
+    // libraries: 'places,drawing,visualization'
     // (as you require)
  
     //// If you want to set the version, you can do so:
@@ -57,8 +57,8 @@ import '@deveodk/vue-toastr/dist/@deveodk/vue-toastr.css'
 // libraries
 import './assets/js/charts.js';
 import './assets/js/main.js';
-import './assets/js/settings.min.js';
-import './assets/js/vendor.min.js';
+import './assets/js/settings.js';
+import './assets/js/jscolor.min.js';
 
 // Use v-calendar, v-date-picker & v-popover components
 Vue.use(VCalendar, {

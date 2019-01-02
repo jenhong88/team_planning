@@ -1,7 +1,7 @@
 <template>
 <header class="header">
     <nav class="header-menu">
-        <div class="nav toggle">
+        <div class="nav toggle" v-on:click="menuToggle">
             <a href="javascript:void(0)" id="menu-toggle" class="ripple">
                 <span class="bars"></span>
             </a>
@@ -102,6 +102,11 @@ export default {
   data () {
     return {
       msg: 'HEADER'
+    }
+  },
+  methods: {
+    menuToggle() {
+      console.log('CLICKED!!!!!!!!!!!!!!!!!!')
     }
   }
 };

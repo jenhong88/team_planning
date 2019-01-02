@@ -339,6 +339,7 @@ var Musa = function() {
 			: this.parentNode.classList.add("opened");
 	}),
 	(Musa.prototype.toggleMenu = function() {
+		console.log('it clicked in main.js')
 		if (musa.body.classList.contains("nav-sm")) {
 			var t = document.querySelector(
 				"#sidebar-menu .menu-section .side-menu li.has-child.active"

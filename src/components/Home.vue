@@ -2,11 +2,12 @@
   <div class="hello">
     <header />
     <h1>{{ msg }}</h1>
+    <p>{{ weather }}</p>
     <GmapMap
-      :center="{lat:10, lng:10}"
+      :center="{lat:40.7128, lng:-74.0060}"
       :zoom="7"
       map-type-id="terrain"
-      style="width: 500px; height: 300px"
+      style="width: 100%; height: 300px"
     >
       <GmapMarker
         :key="index"
@@ -16,7 +17,7 @@
         :draggable="true"
         @click="center=m.position"
       />
-    </GmapMap>
+    </GmapMap> 
   </div>
 </template>
 
@@ -27,9 +28,21 @@ export default {
   name: "Calendar",
   data() {
     return {
-      msg: "WELCOME TO TEAMDREAM"
+      msg: "WELCOME TO TEAMDREAM",
+      weather: ""
     };
-  }
+  },
+  created() {
+    axios
+      .get(`http://api.openweathermap.org/data/2.5/forecast?q=New_York&APPID=dc7d08d80be0c3aa1fbd760521de9b5a`)
+      .then(response => {
+        this.weather = response.data;
+        console.log(response.data)
+      })
+      .catch(e => {
+        this.errors.push(e);
+      });
+  },
 };
 </script>
 
