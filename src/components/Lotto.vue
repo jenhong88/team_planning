@@ -4,17 +4,24 @@
     <h1>{{ msg }}</h1>
     <button v-on:click="calculate">Calculate</button>
 
+    <!--
+      <ul>
+        <li>{{ average[0].first }}</li>
+        <li>{{ average[0].second }}</li>
+        <li>{{ average[0].third }}</li>
+        <li>{{ average[0].fourth }}</li>
+        <li>{{ average[0].fifth }}</li>
+        <li>Mega: {{ average[0].mega }}</li>
+      </ul>
+    -->
+
     <ul>
-      <li v-for="entry in entries">
+      <li v-for="number in numberStat.sort()">
         <!-- {{ entry.draw_date | moment("MMMM Do YYYY") }} -->
         <!-- {{ entry.winning_numbers }} -->
         <!-- {{ entry.mega_ball }} -->
-        <div>{{ entry.winning_numbers | first }}</div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- <div>{{ entry.winning_numbers | first }}</div> -->
+        {{ number }}
       </li>
     </ul>
 
@@ -26,7 +33,7 @@
 import axios from "axios";
 
 export default {
-  name: "Calendar",
+  name: "Lotto",
   data() {
     return {
       msg: "WELCOME TO TEAMDREAM",
@@ -34,7 +41,9 @@ export default {
       errors: [],
       average: [
         { first: "", second: "", third: "", fourth: "", fifth: "", mega: "" }
-      ]
+      ],
+      numberStat: [],
+      availableNumbers: {}
     };
   },
   created() {
@@ -43,24 +52,43 @@ export default {
       .then(response => {
         const allEntries = response.data;
 
-        function colorCheck(num){
-          if(num >= 30){
-            return "high"
-          }else{
-            return "low"
-          }
-        }
-
         allEntries.map(entry => {
-          const numbers = entry.winning_numbers;
-          entry.first = colorCheck(numbers.split(" ")[0]);
-          entry.second = numbers.split(" ")[1];
-          entry.third = numbers.split(" ")[2];
-          entry.fourth = numbers.split(" ")[3];
-          entry.fifth = numbers.split(" ")[4];
-          entry.mega = entry.mega_ball;
+          let numbers = entry.winning_numbers;
+
+          entry.first = Math.round(numbers.split(" ")[0]);
+          entry.second = Math.round(numbers.split(" ")[1]);
+          entry.third = Math.round(numbers.split(" ")[2]);
+          entry.fourth = Math.round(numbers.split(" ")[3]);
+          entry.fifth = Math.round(numbers.split(" ")[4]);
+          entry.mega = Math.round(entry.mega_ball);
+
+          const first = Math.round(numbers.split(" ")[0]);
+          const second = Math.round(numbers.split(" ")[1]);
+          const third = Math.round(numbers.split(" ")[2]);
+          const fourth = Math.round(numbers.split(" ")[3]);
+          const fifth = Math.round(numbers.split(" ")[4]);
+          const mega = Math.round(entry.mega_ball);
+
+          this.numberStat.push(first);
+          // console.log(first)
+          let stats = this.availableNumbers;
+          
+          // this.availableNumbers.first = "hello"
+
+          stats.map(e => {
+            // console.log(e)
+            if (e === first) {
+              // console.log("MATCHED ==== ", e);
+            }
+          });
+
+          stats.push(second);
+          stats.push(third);
+          stats.push(fourth);
+          stats.push(fifth);
+          stats.push(mega);
         });
-        this.entries = response.data;
+        this.entries = allEntries;
       })
       .catch(e => {
         this.errors.push(e);
@@ -93,12 +121,12 @@ export default {
           mega = parseInt(e.mega_ball) + mega;
         }
       });
-      ave.first = first / data.length;
-      ave.second = second / data.length;
-      ave.third = third / data.length;
-      ave.fourth = fourth / data.length;
-      ave.fifth = fifth / data.length;
-      ave.mega = mega / data.length;
+      ave.first = Math.round(first / data.length);
+      ave.second = Math.round(second / data.length);
+      ave.third = Math.round(third / data.length);
+      ave.fourth = Math.round(fourth / data.length);
+      ave.fifth = Math.round(fifth / data.length);
+      ave.mega = Math.round(mega / data.length);
     }
   },
   filters: {
@@ -124,8 +152,10 @@ ul {
   text-align: center;
 }
 li {
-  font-size: 10px;
-  height: 12px;
+  font-size: 20px;
+  line-height: 20px;
   widows: 100%;
+  text-align: left;
+  display: inline;
 }
 </style>

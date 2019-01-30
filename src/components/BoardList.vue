@@ -6,7 +6,7 @@
         <b-link href="#/add-board">(Add Board)</b-link>
       </h2>
       <b-table striped hover :items="boards" :fields="fields">
-        <template slot="actions" scope="row">
+        <template slot="actions" slot-scope="row">
           <b-btn class="btn-success" size="sm" @click.stop="details(row.item);">Details</b-btn>
         </template>
       </b-table>

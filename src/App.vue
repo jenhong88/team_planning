@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import './assets/styles/sass/main.scss'
 
 </style>
