@@ -48,4 +48,5 @@ export default {
 <style lang="scss">
 @import './assets/styles/sass/main.scss'
 
+
 </style>

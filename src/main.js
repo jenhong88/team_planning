@@ -59,6 +59,7 @@ import './assets/js/charts.js';
 import './assets/js/main.js';
 import './assets/js/settings.js';
 import './assets/js/jscolor.min.js';
+import './assets/js/vendor.min.js';
 
 // Use v-calendar, v-date-picker & v-popover components
 Vue.use(VCalendar, {
