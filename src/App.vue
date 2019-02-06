@@ -2,7 +2,7 @@
   <div id="app" class="nav-md theme-green">
     <div class="main-container">
         <!-- sidebar -->
-        <Sidebar/>
+        <!-- <Sidebar/> -->
         <!-- /sidebar -->
         <div class="content-wrapper">
             <HeaderComponent/>
