@@ -21,7 +21,7 @@
 
 export default [
   {
-    url: null,
+    url: "/",
     name: "Dashboard",
     slug: "dashboard",
     icon: "HomeIcon",

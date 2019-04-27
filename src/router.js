@@ -46,24 +46,24 @@ const router = new Router({
         // =============================================================================
                 {
                     path: '/',
-                    redirect: '/dashboard/analytics'
+                    redirect: '/dashboard'
                 },
                 {
-                    path: '/dashboard/analytics',
+                    path: '/dashboard',
                     name: 'dashboardAnalytics',
                     component: () => import('./views/DashboardAnalytics.vue'),
                     meta: {
                         rule: 'editor'
                     }
                 },
-                {
-                    path: '/dashboard/ecommerce',
-                    name: 'dashboardECommerce',
-                    component: () => import('./views/DashboardECommerce.vue'),
-                    meta: {
-                        rule: 'admin'
-                    }
-                },
+                // {
+                //     path: '/dashboard/ecommerce',
+                //     name: 'dashboardECommerce',
+                //     component: () => import('./views/DashboardECommerce.vue'),
+                //     meta: {
+                //         rule: 'admin'
+                //     }
+                // },
 
 
         // =============================================================================
@@ -101,48 +101,48 @@ const router = new Router({
                         rule: 'editor'
                     }
                 },
-                {
-                    path: '/apps/eCommerce/shop',
-                    name: 'eCommerceShop',
-                    component: () => import('./views/apps/eCommerce/ECommerceShop.vue'),
-                    meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'eCommerce'},
-                            { title: 'Shop', active: true },
-                        ],
-                        pageTitle: 'Shop',
-                        rule: 'editor'
-                    }
-                },
-                {
-                    path: '/apps/eCommerce/wish-list',
-                    name: 'eCommerceWishList',
-                    component: () => import('./views/apps/eCommerce/ECommerceWishList.vue'),
-                    meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'eCommerce', url:'/apps/eCommerce/shop'},
-                            { title: 'Wish List', active: true },
-                        ],
-                        pageTitle: 'Wish List',
-                        rule: 'editor'
-                    }
-                },
-                {
-                    path: '/apps/eCommerce/checkout',
-                    name: 'eCommerceCheckout',
-                    component: () => import('./views/apps/eCommerce/ECommerceCheckout.vue'),
-                    meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'eCommerce', url:'/apps/eCommerce/shop'},
-                            { title: 'Checkout', active: true },
-                        ],
-                        pageTitle: 'Checkout',
-                        rule: 'editor'
-                    }
-                },
+                // {
+                //     path: '/apps/eCommerce/shop',
+                //     name: 'eCommerceShop',
+                //     component: () => import('./views/apps/eCommerce/ECommerceShop.vue'),
+                //     meta: {
+                //         breadcrumb: [
+                //             { title: 'Home', url: '/' },
+                //             { title: 'eCommerce'},
+                //             { title: 'Shop', active: true },
+                //         ],
+                //         pageTitle: 'Shop',
+                //         rule: 'editor'
+                //     }
+                // },
+                // {
+                //     path: '/apps/eCommerce/wish-list',
+                //     name: 'eCommerceWishList',
+                //     component: () => import('./views/apps/eCommerce/ECommerceWishList.vue'),
+                //     meta: {
+                //         breadcrumb: [
+                //             { title: 'Home', url: '/' },
+                //             { title: 'eCommerce', url:'/apps/eCommerce/shop'},
+                //             { title: 'Wish List', active: true },
+                //         ],
+                //         pageTitle: 'Wish List',
+                //         rule: 'editor'
+                //     }
+                // },
+                // {
+                //     path: '/apps/eCommerce/checkout',
+                //     name: 'eCommerceCheckout',
+                //     component: () => import('./views/apps/eCommerce/ECommerceCheckout.vue'),
+                //     meta: {
+                //         breadcrumb: [
+                //             { title: 'Home', url: '/' },
+                //             { title: 'eCommerce', url:'/apps/eCommerce/shop'},
+                //             { title: 'Checkout', active: true },
+                //         ],
+                //         pageTitle: 'Checkout',
+                //         rule: 'editor'
+                //     }
+                // },
         // =============================================================================
         // UI ELEMENTS
         // =============================================================================
