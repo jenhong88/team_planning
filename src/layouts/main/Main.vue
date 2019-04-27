@@ -80,7 +80,7 @@ import TheFooter from '../components/TheFooter.vue';
 import themeConfig from '@/../themeConfig.js';
 import sidebarItems from "@/layouts/components/vx-sidebar/sidebarItems.js";
 import BackToTop from 'vue-backtotop'
-// const VxTour = () => import('@/components/VxTour.vue')
+const VxTour = () => import('@/components/VxTour.vue')
 
 export default {
     data() {
@@ -212,8 +212,8 @@ export default {
         TheNavbar,
         TheFooter,
         TheCustomizer,
-        BackToTop
-        // VxTour
+        BackToTop,
+        VxTour
     },
     created() {
         this.setSidebarWidth();

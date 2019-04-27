@@ -78,9 +78,9 @@ Vue.use(VueClipboard);
 
 
 // Tour
-// import VueTour from 'vue-tour'
-// Vue.use(VueTour)
-// require('vue-tour/dist/vue-tour.css')
+import VueTour from 'vue-tour'
+Vue.use(VueTour)
+require('vue-tour/dist/vue-tour.css')
 
 
 // VeeValidate
