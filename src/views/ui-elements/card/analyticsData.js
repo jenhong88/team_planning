@@ -656,10 +656,12 @@ export default {
         series: [{
             name: 'Visits',
             data: [90, 50, 86, 40, 100, 20],
-        }, {
-            name: 'Sales',
-            data: [70, 75, 70, 76, 20, 85],
-        }],
+        }
+        // , {
+        //     name: 'Sales',
+        //     data: [70, 75, 70, 76, 20, 85],
+        // }
+        ],
         chartOptions: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
             dataLabels: {

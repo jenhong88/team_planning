@@ -10,63 +10,16 @@
 <template>
   <div id="dashboard-analytics">
     <div class="vx-row">
-      <!-- CARD 6: Product Orders -->
-      <div class="vx-col w-full lg:w-1/3 mb-base">
-        <vx-card title="Product Orders">
-          <!-- CARD ACTION -->
-          <template slot="actions">
-            <change-time-duration-dropdown />
-          </template>
-
-          <div slot="no-body">
-            <vue-apex-charts
-              type="radialBar"
-              height="370"
-              :options="analyticsData.productOrdersRadialBar.chartOptions"
-              :series="analyticsData.productOrdersRadialBar.series"
-            />
-          </div>
-
-          <ul>
-            <li
-              v-for="orderData in analyticsData.productOrdersRadialBar
-                .analyticsData"
-              :key="orderData.orderType"
-              class="flex mb-3 justify-between"
-            >
-              <span class="flex items-center">
-                <span
-                  class="inline-block h-4 w-4 rounded-full mr-2 bg-white border-3 border-solid"
-                  :class="`border-${orderData.color}`"
-                ></span>
-                <span class="font-semibold">{{ orderData.orderType }}</span>
-              </span>
-              <span>{{ orderData.counts }}</span>
-            </li>
-            <!-- <li><span class="inline-block h-2 w-2 rounded-full mr-2 bg-primary"></span>Finished - 23,043</li> -->
-          </ul>
-        </vx-card>
-      </div>
 
       <!-- CARD 7: Sales Stats -->
-      <div class="vx-col w-full lg:w-1/3 mb-base">
-        <vx-card title="Sales Stats" subtitle="Last 6 Months">
+      <div class="vx-col w-full lg:w-2/3 mb-base">
+        <vx-card title="Departure Time Poll" subtitle="next 6 Months">
           <template slot="actions">
             <feather-icon
               icon="MoreVerticalIcon"
               svgClasses="w-6 h-6 text-grey"
             ></feather-icon>
           </template>
-          <div class="flex">
-            <span class="flex items-center"
-              ><div class="h-3 w-3 rounded-full mr-1 bg-primary"></div>
-              <span>Sales</span></span
-            >
-            <span class="flex items-center ml-4"
-              ><div class="h-3 w-3 rounded-full mr-1 bg-success"></div>
-              <span>Visits</span></span
-            >
-          </div>
           <div slot="no-body-bottom">
             <vue-apex-charts
               type="radar"
