@@ -1,4 +1,4 @@
-<!-- =========================================================================================
+ j8j76<!-- =========================================================================================
   File Name: DashboardAnalytics.vue
   Description: Dashboard Analytics
   ----------------------------------------------------------------------------------------
@@ -11,8 +11,23 @@
   <div id="dashboard-analytics">
     <div class="vx-row">
 
+      <div class="vx-col w-full lg:w-1/3 mb-base">
+          <vx-card>
+              <div slot="no-body">
+                  <img :src="require(`@/assets/images/pages/${card_1.contentImg1}`)" alt="content-img" class="responsive card-img-top">
+              </div>
+              <h5 class="mb-2">{{ card_1.title }}</h5>
+              <p class="text-grey">{{ card_1.subtitle }}</p>
+              <p class="text-grey">{{ card_1.subtitle_2 }}</p>
+              <div class="flex justify-between flex-wrap">
+                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Download</vs-button>
+                  <vs-button class="mt-4" type="border" color="#b9b9b9">View All</vs-button>
+              </div>
+          </vx-card>
+      </div>
+
       <!-- CARD 7: Sales Stats -->
-      <div class="vx-col w-full lg:w-2/3 mb-base">
+      <div class="vx-col w-full lg:w-1/3 mb-base">
         <vx-card title="Departure Time Poll" subtitle="next 6 Months">
           <template slot="actions">
             <feather-icon
@@ -43,7 +58,7 @@
                 ></feather-icon>
               </div>
               <div class="timeline-info">
-                <p class="font-semibold">Client Meeting</p>
+                <p class="font-semibold">Activities</p>
                 <span class="activity-desc"
                   >Bonbon macaroon jelly beans gummi bears jelly lollipop
                   apple</span
@@ -59,7 +74,7 @@
                 ></feather-icon>
               </div>
               <div class="timeline-info">
-                <p class="font-semibold">Email Newsletter</p>
+                <p class="font-semibold">Location needs polling</p>
                 <span class="activity-desc"
                   >Cupcake gummi bears soufflé caramels candy</span
                 >
@@ -74,7 +89,7 @@
                 ></feather-icon>
               </div>
               <div class="timeline-info">
-                <p class="font-semibold">Plan Webinar</p>
+                <p class="font-semibold">Vision Board Started</p>
                 <span class="activity-desc"
                   >Candy ice cream cake. Halvah gummi bears</span
                 >
@@ -89,7 +104,7 @@
                 ></feather-icon>
               </div>
               <div class="timeline-info">
-                <p class="font-semibold">Launch Website</p>
+                <p class="font-semibold">Departure date polled</p>
                 <span class="activity-desc"
                   >Candy ice cream cake. Halvah gummi bears Cupcake gummi bears
                   soufflé caramels candy.</span
@@ -105,7 +120,7 @@
                 ></feather-icon>
               </div>
               <div class="timeline-info">
-                <p class="font-semibold">Marketing</p>
+                <p class="font-semibold">Invited Members to Dashboard</p>
                 <span class="activity-desc"
                   >Candy ice cream cake. Halvah gummi bears Cupcake gummi
                   bears.</span
@@ -116,80 +131,8 @@
           </ul>
         </vx-card>
       </div>
-    </div>
 
-    <div class="vx-row">
-      <!-- CARD 9: DISPATCHED ORDERS -->
-      <div class="vx-col w-full">
-        <vx-card title="Dispatched Orders">
-          <div slot="no-body" class="mt-4">
-            <vs-table :data="users">
-              <template slot="thead">
-                <vs-th>ORDER NO.</vs-th>
-                <vs-th>STATUS</vs-th>
-                <vs-th>OPERATORS</vs-th>
-                <vs-th>LOCATION</vs-th>
-                <vs-th>DISTANCE</vs-th>
-                <vs-th>START DATE</vs-th>
-                <vs-th>EST DELIVERY DATE</vs-th>
-              </template>
 
-              <template slot-scope="{ data }">
-                <vs-tr :key="indextr" v-for="(tr, indextr) in data">
-                  <vs-td :data="data[indextr].orderNo">
-                    <span>#{{ data[indextr].orderNo }}</span>
-                  </vs-td>
-                  <vs-td :data="data[indextr].status">
-                    <span class="flex items-center px-2 py-1 rounded"
-                      ><div
-                        class="h-3 w-3 rounded-full mr-2"
-                        :class="'bg-' + data[indextr].statusColor"
-                      ></div>
-                      {{ data[indextr].status }}</span
-                    >
-                  </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
-                    <ul class="users-liked user-list">
-                      <li
-                        v-for="(user, userIndex) in data[indextr].usersLiked"
-                        :key="userIndex"
-                      >
-                        <vx-tooltip :text="user.name" position="bottom">
-                          <vs-avatar
-                            :src="
-                              require(`@/assets/images/portrait/small/${
-                                user.img
-                              }`)
-                            "
-                            size="30px"
-                            class="border-2 border-white border-solid -m-1"
-                          ></vs-avatar>
-                        </vx-tooltip>
-                      </li>
-                    </ul>
-                  </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
-                    <span>{{ data[indextr].location }}</span>
-                  </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
-                    <span>{{ data[indextr].distance }}</span>
-                    <vs-progress
-                      :percent="data[indextr].distPercent"
-                      :color="data[indextr].statusColor"
-                    ></vs-progress>
-                  </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
-                    <span>{{ data[indextr].startDate }}</span>
-                  </vs-td>
-                  <vs-td :data="data[indextr].orderNo">
-                    <span>{{ data[indextr].estDelDate }}</span>
-                  </vs-td>
-                </vs-tr>
-              </template>
-            </vs-table>
-          </div>
-        </vx-card>
-      </div>
     </div>
   </div>
 </template>
@@ -235,60 +178,66 @@ export default {
           distPercent: 80,
           startDate: "14:58 26/07/2018",
           estDelDate: "28/07/2018"
-        },
-        {
-          orderNo: 156897,
-          status: "Pending",
-          statusColor: "warning",
-          operator: "Britany Ryder",
-          operatorImg: "avatar-s-4.png",
-          usersLiked: [
-            { name: "Trina Lynes", img: "avatar-s-1.png" },
-            { name: "Lilian Nenez", img: "avatar-s-2.png" },
-            { name: "Alberto Glotzbach", img: "avatar-s-3.png" }
-          ],
-          location: "Cordova, Alaska",
-          distance: "234 km",
-          distPercent: 60,
-          startDate: "14:58 26/07/2018",
-          estDelDate: "28/07/2018"
-        },
-        {
-          orderNo: 568975,
-          status: "Moving",
-          statusColor: "success",
-          operator: "Kishan Ashton",
-          operatorImg: "avatar-s-1.png",
-          usersLiked: [
-            { name: "Lai Lewandowski", img: "avatar-s-6.png" },
-            { name: "Elicia Rieske", img: "avatar-s-7.png" },
-            { name: "Darcey Nooner", img: "avatar-s-8.png" },
-            { name: "Julee Rossignol", img: "avatar-s-10.png" },
-            { name: "Jeffrey Gerondale", img: "avatar-s-9.png" }
-          ],
-          location: "Florence, Alabama",
-          distance: "168 km",
-          distPercent: 70,
-          startDate: "14:58 26/07/2018",
-          estDelDate: "28/07/2018"
-        },
-        {
-          orderNo: 245689,
-          status: "Canceled",
-          statusColor: "danger",
-          operator: "Anabella Elliott",
-          operatorImg: "avatar-s-6.png",
-          usersLiked: [
-            { name: "Vennie Mostowy", img: "avatar-s-5.png" },
-            { name: "Elicia Rieske", img: "avatar-s-7.png" }
-          ],
-          location: "Clifton, Arizona",
-          distance: "125 km",
-          distPercent: 95,
-          startDate: "14:58 26/07/2018",
-          estDelDate: "28/07/2018"
         }
-      ]
+        // {
+        //   orderNo: 156897,
+        //   status: "Pending",
+        //   statusColor: "warning",
+        //   operator: "Britany Ryder",
+        //   operatorImg: "avatar-s-4.png",
+        //   usersLiked: [
+        //     { name: "Trina Lynes", img: "avatar-s-1.png" },
+        //     { name: "Lilian Nenez", img: "avatar-s-2.png" },
+        //     { name: "Alberto Glotzbach", img: "avatar-s-3.png" }
+        //   ],
+        //   location: "Cordova, Alaska",
+        //   distance: "234 km",
+        //   distPercent: 60,
+        //   startDate: "14:58 26/07/2018",
+        //   estDelDate: "28/07/2018"
+        // },
+        // {
+        //   orderNo: 568975,
+        //   status: "Moving",
+        //   statusColor: "success",
+        //   operator: "Kishan Ashton",
+        //   operatorImg: "avatar-s-1.png",
+        //   usersLiked: [
+        //     { name: "Lai Lewandowski", img: "avatar-s-6.png" },
+        //     { name: "Elicia Rieske", img: "avatar-s-7.png" },
+        //     { name: "Darcey Nooner", img: "avatar-s-8.png" },
+        //     { name: "Julee Rossignol", img: "avatar-s-10.png" },
+        //     { name: "Jeffrey Gerondale", img: "avatar-s-9.png" }
+        //   ],
+        //   location: "Florence, Alabama",
+        //   distance: "168 km",
+        //   distPercent: 70,
+        //   startDate: "14:58 26/07/2018",
+        //   estDelDate: "28/07/2018"
+        // },
+        // {
+        //   orderNo: 245689,
+        //   status: "Canceled",
+        //   statusColor: "danger",
+        //   operator: "Anabella Elliott",
+        //   operatorImg: "avatar-s-6.png",
+        //   usersLiked: [
+        //     { name: "Vennie Mostowy", img: "avatar-s-5.png" },
+        //     { name: "Elicia Rieske", img: "avatar-s-7.png" }
+        //   ],
+        //   location: "Clifton, Arizona",
+        //   distance: "125 km",
+        //   distPercent: 95,
+        //   startDate: "14:58 26/07/2018",
+        //   estDelDate: "28/07/2018"
+        // }
+      ],
+      card_1: {
+                contentImg1: 'content-img-1.jpg',
+                title: 'Vuesax Admin',
+                subtitle: 'By Pixinvent Creative Studio',
+                subtitle_2: 'Elite Author',
+            }
     };
   },
   components: {
