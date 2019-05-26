@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm run serve"
+    "start": "node server.js"
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.0.1",
@@ -16,6 +16,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
     "core-js": "^2.5.7",
+    "express": "^4.17.1",
     "firebase": "^5.9.1",
     "instantsearch.css": "^7.1.1",
     "material-icons": "^0.3.0",
