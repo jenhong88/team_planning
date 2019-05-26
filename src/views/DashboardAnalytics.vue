@@ -11,13 +11,18 @@
   <div id="dashboard-analytics">
     <div class="vx-row">
 
-      <div class="mt-5">
-          <gmap-map :center="center" :zoom="15" style="width: 100%; height: 500px">
-              <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">
-                  {{infoContent}}
-              </gmap-info-window>
-              <gmap-marker :key="i" v-for="(m,i) in markers" :position="m.position" :clickable="true" @click="toggleInfoWindow(m,i)"></gmap-marker>
-          </gmap-map>
+     <!-- Google Maps -->
+      <div class="vx-col w-full lg:w-3/3 mb-base height">
+        <vx-card>
+          <div class="mt-5">
+              <gmap-map :center="center" :zoom="15" style="width: 100%; height: 500px">
+                  <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">
+                      {{infoContent}}
+                  </gmap-info-window>
+                  <gmap-marker :key="i" v-for="(m,i) in markers" :position="m.position" :clickable="true" @click="toggleInfoWindow(m,i)"></gmap-marker>
+              </gmap-map>
+          </div>
+        </vx-card>
       </div>
 
       <div class="vx-col w-full lg:w-1/3 mb-base height">
@@ -64,6 +69,9 @@
               </div>
           </vx-card>
       </div>
+
+      <!-- Calendar -->
+      <Calendar />
 
 
     </div>
@@ -76,6 +84,7 @@ import StatisticsCardLine from "@/components/statistics-cards/StatisticsCardLine
 import analyticsData from "./ui-elements/card/analyticsData.js";
 import ChangeTimeDurationDropdown from "@/components/ChangeTimeDurationDropdown.vue";
 import GoogleMapInfoWindow from "@/views/charts-and-maps/maps/google-map/GoogleMapInfoWindow.vue"
+import Calendar from "@/views/apps/Calendar.vue";
 
 
 export default {
@@ -141,8 +150,9 @@ export default {
     VueApexCharts,
     StatisticsCardLine,
     ChangeTimeDurationDropdown,
-    GoogleMapInfoWindow
-  },
+    GoogleMapInfoWindow,
+    Calendar
+  },  
   methods: {
         toggleInfoWindow: function(marker, idx) {
             this.infoWindowPos = marker.position;
