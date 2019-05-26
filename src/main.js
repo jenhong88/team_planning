@@ -93,7 +93,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(VueGoogleMaps, {
     load: {
         // Add your API key here
-        key: 'YOUR_KEY',
+        key: 'AIzaSyDoL3TdDlYcai33kONiuZlokxEDJgMapI4',
         libraries: 'places', // This is required if you use the Auto complete plug-in
     },
 })
