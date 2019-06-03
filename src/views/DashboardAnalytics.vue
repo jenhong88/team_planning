@@ -18,10 +18,11 @@
               </div>
               <h5 class="mb-2">{{ card_1.title }}</h5>
               <p class="text-grey">{{ card_1.subtitle }}</p>
-              <p class="text-grey">{{ card_1.subtitle_2 }}</p>
+              <p class="text-grey">Vote YES:{{ card_1.vote_yes }}</p>
+              <p class="text-grey">Vote NO:{{ card_1.vote_no }}</p>
               <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9">No</vs-button>
+                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_1.vote_yes++}">Yes</vs-button>
+                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_1.vote_no++}">No</vs-button>
               </div>
           </vx-card>
       </div>
@@ -32,11 +33,12 @@
                   <img :src="require(`@/assets/images/pages/${card_2.contentImg2}`)" alt="content-img" class="responsive card-img-top">
               </div>
               <h5 class="mb-2">{{ card_1.title }}</h5>
-              <p class="text-grey">{{ card_1.subtitle }}</p>
-              <p class="text-grey">{{ card_1.subtitle_2 }}</p>
+              <p class="text-grey">{{ card_2.subtitle }}</p>
+              <p class="text-grey">Vote YES:{{ card_2.vote_yes }}</p>
+              <p class="text-grey">Vote NO:{{ card_2.vote_no }}</p>
               <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9">No</vs-button>
+                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_2.vote_yes++}">Yes</vs-button>
+                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_2.vote_no++}">No</vs-button>
               </div>
           </vx-card>
       </div>
@@ -47,11 +49,12 @@
                   <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">
               </div>
               <h5 class="mb-2">{{ card_1.title }}</h5>
-              <p class="text-grey">{{ card_1.subtitle }}</p>
-              <p class="text-grey">{{ card_1.subtitle_2 }}</p>
+              <p class="text-grey">{{ card_3.subtitle }}</p>
+              <p class="text-grey">Vote YES:{{ card_3.vote_yes }}</p>
+              <p class="text-grey">Vote NO:{{ card_3.vote_no }}</p>
               <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9">No</vs-button>
+                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_3.vote_yes++}">Yes</vs-button>
+                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_3.vote_no++}">No</vs-button>
               </div>
           </vx-card>
       </div>
@@ -107,19 +110,25 @@ export default {
                 contentImg1: 'demo_1.jpg',
                 title: 'Africa',
                 subtitle: 'Recommended by:',
-                subtitle_2: 'Anna'
+                subtitle_2: 'Anna',
+                vote_yes: 0,
+                vote_no: 0
       },
       card_2: {
                 contentImg2: 'demo_2.jpg',
                 title: 'Budapest',
                 subtitle: 'Recommended by:',
-                subtitle_2: 'Paul'
+                subtitle_2: 'Paul',
+                vote_yes: 0,
+                vote_no: 0
       },
       card_3: {
                 contentImg3: 'demo_3.jpg',
                 title: 'Thailand',
                 subtitle: 'Recommended by:',
-                subtitle_2: 'Kevin'
+                subtitle_2: 'Kevin',
+                vote_yes: 0,
+                vote_no: 0
       },
       center: { lat: 47.376332, lng: 8.547511 },
       infoContent: '',
@@ -155,6 +164,10 @@ export default {
                 this.infoWinOpen = true;
                 this.currentMidx = idx;
             }
+        },
+        voteYes: (tile) => {
+          let tileId = `this.${tile}`
+          this.card_1[0].vote_yes++
         }
     }
 };
