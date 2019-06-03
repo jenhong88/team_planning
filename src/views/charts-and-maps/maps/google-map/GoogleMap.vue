@@ -10,14 +10,14 @@
 <template>
     <div id="extra-component-google-map-demo">
 
-        <p class="mb-4"><a href="https://xkjyeah.github.io/vue-google-maps/" target="_blank" rel="nofollow">Google maps</a> component for vue with 2-way data binding</p>
+<!--         <p class="mb-4"><a href="https://xkjyeah.github.io/vue-google-maps/" target="_blank" rel="nofollow">Google maps</a> component for vue with 2-way data binding</p> -->
 
-        <google-map-basic></google-map-basic>
+        <!-- <google-map-basic></google-map-basic> -->
         <google-map-info-window></google-map-info-window>
-        <google-map-street-view></google-map-street-view>
+        <!-- <google-map-street-view></google-map-street-view> -->
         
-        <div class="content-area__content">
-        </div>
+<!--         <div class="content-area__content">
+        </div> -->
     </div>
 </template>
 

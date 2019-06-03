@@ -9,12 +9,12 @@
 
 
 <template>
-    <vx-card title="Info Window" code-toggler>
+    <vx-card code-toggler>
 
-        <p>A basic example of using a single infowindow for 3 markers</p>
+        <!-- <p>A basic example of using a single infowindow for 3 markers</p> -->
 
         <div class="mt-5">
-            <gmap-map :center="center" :zoom="15" style="width: 100%; height: 500px">
+            <gmap-map :center="center" :zoom="3" style="width: 100%; height: 500px">
                 <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">
                     {{infoContent}}
                 </gmap-info-window>
@@ -46,9 +46,9 @@ export default {
       pixelOffset: { width: 0, height: -35 }
       },
       markers: [
-        { position: { lat: 47.376332, lng: 8.547511 }, infoText: 'Marker 1' },
-        { position: { lat: 47.374592, lng: 8.548867 }, infoText: 'Marker 2' },
-        { position: { lat: 47.379592, lng: 8.549867 }, infoText: 'Marker 3' }
+        { position: { lat: 8.7832, lng: 34.5085 }, infoText: 'Africa' },
+        { position: { lat: 47.4979, lng: 19.0402 }, infoText: 'Budapest' },
+        { position: { lat: 15.8700, lng: 100.9925 }, infoText: 'Thailand' }
       ]
     }
   },
@@ -77,7 +77,7 @@ export default {
 export default {
     data() {
         return {
-            center: { lat: 47.376332, lng: 8.547511 },
+            center: { lat: 35.774365, lng: 54.572027 },
             infoContent: '',
             infoWindowPos: null,
             infoWinOpen: false,
@@ -87,9 +87,9 @@ export default {
             pixelOffset: { width: 0, height: -35 }
             },
             markers: [
-                { position: { lat: 47.376332, lng: 8.547511 }, infoText: 'Marker 1' },
-                { position: { lat: 47.374592, lng: 8.548867 }, infoText: 'Marker 2' },
-                { position: { lat: 47.379592, lng: 8.549867 }, infoText: 'Marker 3' }
+                { position: { lat: 8.7832, lng: 34.5085 }, infoText: 'Africa' },
+                { position: { lat: 47.4979, lng: 19.0402 }, infoText: 'Budapest' },
+                { position: { lat: 15.8700, lng: 100.9925 }, infoText: 'Thailand' }
             ]
         }
     },
