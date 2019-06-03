@@ -885,12 +885,12 @@ const router = new Router({
                     name: 'extraComponentMapsGoogleMap',
                     component: () => import('@/views/charts-and-maps/maps/google-map/GoogleMap.vue'),
                     meta: {
-                        breadcrumb: [
-                            { title: 'Home', url: '/' },
-                            { title: 'Charts & Maps' },
-                            { title: 'Google Map', active: true },
-                        ],
-                        pageTitle: 'Google Map',
+                        // breadcrumb: [
+                        //     { title: 'Home', url: '/' },
+                        //     { title: 'Charts & Maps' },
+                        //     { title: 'Google Map', active: true },
+                        // ],
+                        // pageTitle: 'Google Map',
                         rule: 'editor'
                     },
                 },

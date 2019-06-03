@@ -16,7 +16,7 @@
         <full-calendar class="w-full select-none" :events="calendarEvents" locale="en" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
 
             <!-- HEADER LEFT -->
-            <div slot="fc-header-left" class="flex flex-wrap sm:justify-start justify-center">
+<!--             <div slot="fc-header-left" class="flex flex-wrap sm:justify-start justify-center">
                 <div v-for="(label, index) in calendarLabels" :key="index" class="flex items-center mr-4 mb-2">
                     <div class="h-3 w-3 inline-block rounded-full mr-2" :class="'bg-' + label.color"></div>
                     <span>{{ label.text }}</span>
@@ -25,7 +25,7 @@
                     <div class="h-3 w-3 inline-block rounded-full mr-2 bg-primary"></div>
                     <span>None</span>
                 </div>
-            </div>
+            </div> -->
 
             <!-- HEADER RIGHT -->
             <div slot="fc-header-right" class="flex justify-end">

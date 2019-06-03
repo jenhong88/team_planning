@@ -50,9 +50,9 @@ export default [
   },
   {
     url: '/charts-and-maps/maps/google-map',
-    name: "Google Map",
+    name: "Map",
     icon: "MapIcon",
     slug: "extraComponentMapsGoogleMap",
-    i18n: "GoogleMap",
+    i18n: "Map",
   }
 ]
