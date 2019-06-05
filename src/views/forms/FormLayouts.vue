@@ -12,7 +12,7 @@
 						<vs-input class="w-full" v-model="input1" />
 					</div>
 				</div>
-				<div class="vx-row mb-6">
+				<!-- <div class="vx-row mb-6">
 					<div class="vx-col sm:w-1/5 w-full">
 						<span>Activity #2</span>
 					</div>
@@ -35,7 +35,7 @@
 					<div class="vx-col sm:w-4/5 w-full">
 						<vs-input class="w-full" v-model="input4" />
 					</div>
-				</div>
+				</div> -->
 				<!-- <div class="vx-row mb-6">
 					<div class="vx-col sm:w-2/3 w-full ml-auto">
 						<vs-checkbox class="inline-flex" v-model="check1">Remember Me</vs-checkbox>

@@ -11,7 +11,7 @@
   <div id="dashboard-analytics">
     <div class="vx-row">
 
-      <div class="vx-col w-full lg:w-1/3 mb-base height">
+      <div class="vx-col w-full lg:w-1/4 mb-base height">
           <vx-card>
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_1.contentImg1}`)" alt="content-img" class="responsive card-img-top">
@@ -27,7 +27,7 @@
           </vx-card>
       </div>
 
-      <div class="vx-col w-full lg:w-1/3 mb-base height">
+      <div class="vx-col w-full lg:w-1/4 mb-base height">
           <vx-card>
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_2.contentImg2}`)" alt="content-img" class="responsive card-img-top">
@@ -43,7 +43,23 @@
           </vx-card>
       </div>
 
-      <div class="vx-col w-full lg:w-1/3 mb-base height">
+      <div class="vx-col w-full lg:w-1/4 mb-base height">
+          <vx-card>
+              <div slot="no-body">
+                  <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">
+              </div>
+              <h5 class="mb-2">{{ card_3.title }}</h5>
+              <p class="text-grey">{{ card_3.subtitle }}</p>
+              <p class="text-grey">Vote YES:{{ card_3.vote_yes }}</p>
+              <p class="text-grey">Vote NO:{{ card_3.vote_no }}</p>
+              <div class="flex justify-between flex-wrap">
+                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_3.vote_yes++}">Yes</vs-button>
+                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_3.vote_no++}">No</vs-button>
+              </div>
+          </vx-card>
+      </div>
+
+      <div class="vx-col w-full lg:w-1/4 mb-base height">
           <vx-card>
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">

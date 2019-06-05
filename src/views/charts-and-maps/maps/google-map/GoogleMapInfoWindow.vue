@@ -14,7 +14,7 @@
         <!-- <p>A basic example of using a single infowindow for 3 markers</p> -->
 
         <div class="mt-5">
-            <gmap-map :center="center" :zoom="3" style="width: 100%; height: 700px">
+            <gmap-map :center="center" v-bind:options="mapStyle" :zoom="3" style="width: 100%; height: 700px">
                 <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">
                     {{infoContent}}
                 </gmap-info-window>
@@ -83,8 +83,79 @@ export default {
             infoWinOpen: false,
             currentMidx: null,
             //optional: offset infowindow so it visually sits nicely on top of our marker
+            mapStyle: {styles:[
+                {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#e0efef"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "hue": "#1900ff"
+                        },
+                        {
+                            "color": "#c0e8e8"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "lightness": 100
+                        },
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "lightness": 700
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#7dcdcd"
+                        }
+                    ]
+                }
+            ]},
             infoOptions: {
-            pixelOffset: { width: 0, height: -35 }
+              pixelOffset: { width: 0, height: -35 },
             },
             markers: [
                 { position: { lat: 8.7832, lng: 34.5085 }, infoText: 'Africa' },
