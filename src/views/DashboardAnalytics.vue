@@ -32,7 +32,7 @@
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_2.contentImg2}`)" alt="content-img" class="responsive card-img-top">
               </div>
-              <h5 class="mb-2">{{ card_1.title }}</h5>
+              <h5 class="mb-2">{{ card_2.title }}</h5>
               <p class="text-grey">{{ card_2.subtitle }}</p>
               <p class="text-grey">Vote YES:{{ card_2.vote_yes }}</p>
               <p class="text-grey">Vote NO:{{ card_2.vote_no }}</p>
@@ -48,7 +48,7 @@
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">
               </div>
-              <h5 class="mb-2">{{ card_1.title }}</h5>
+              <h5 class="mb-2">{{ card_3.title }}</h5>
               <p class="text-grey">{{ card_3.subtitle }}</p>
               <p class="text-grey">Vote YES:{{ card_3.vote_yes }}</p>
               <p class="text-grey">Vote NO:{{ card_3.vote_no }}</p>

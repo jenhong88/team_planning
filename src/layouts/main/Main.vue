@@ -39,12 +39,12 @@
                     <div class="router-content" :class="{'mt-0': navbarType == 'hidden'}">
                         <transition :name="routerTransition">
                         <div class="router-header flex flex-wrap items-center mb-6" v-if="$route.meta.breadcrumb || $route.meta.pageTitle">
-                            <div class="content-area__heading" :class="{'pr-4 border-0 md:border-r border-t-0 border-b-0 border-l-0 border-solid border-grey-light' : $route.meta.breadcrumb}">
+                           <!--  <div class="content-area__heading" :class="{'pr-4 border-0 md:border-r border-t-0 border-b-0 border-l-0 border-solid border-grey-light' : $route.meta.breadcrumb}">
                                 <h2 class="mb-1">{{ routeTitle }}</h2>
-                            </div>
-                            <vx-breadcrumb class="ml-4 md:block hidden" v-if="$route.meta.breadcrumb" />
+                            </div> -->
+                            <!-- <vx-breadcrumb class="ml-4 md:block hidden" v-if="$route.meta.breadcrumb" /> -->
                             <vs-dropdown class="ml-auto md:block hidden cursor-pointer" vs-trigger-click>
-                                <vs-button radius icon="icon-settings" icon-pack="feather"></vs-button>
+                                <!-- <vs-button radius icon="icon-settings" icon-pack="feather"></vs-button> -->
 
                                 <vs-dropdown-menu class="w-32">
                                     <vs-dropdown-item><router-link to="/pages/profile" class="flex items-center"><feather-icon icon="UserIcon" class="inline-block mr-2" svgClasses="w-4 h-4" /><span>Profile</span></router-link></vs-dropdown-item>
