@@ -13,11 +13,13 @@
     "algoliasearch": "^3.32.0",
     "apexcharts": "^3.6.5",
     "auth0-js": "^9.10.1",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "chart.js": "^2.7.3",
     "core-js": "^2.5.7",
     "express": "^4.17.1",
     "firebase": "^5.9.1",
+    "fstream": ">=1.0.12",
+    "https-proxy-agent": ">=2.2.0",
     "instantsearch.css": "^7.1.1",
     "material-icons": "^0.3.0",
     "perfect-scrollbar": "^1.4.0",
@@ -50,7 +52,8 @@
     "vuejs-datepicker": "^1.5.4",
     "vuepress": "^0.14.10",
     "vuesax": "3.8.59",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "ws": ">=3.3.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
