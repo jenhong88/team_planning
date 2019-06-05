@@ -9,8 +9,22 @@
 
 <template>
   <div id="dashboard-analytics">
-    <div class="vx-row">
+<!--     <div class="vx-row">
+      <div class="vx-col sm:w-1/5 w-full ml-auto" v-if="!poll">
+        <vs-button class="mr-3 mb-2" v-on:click="!poll">Send</vs-button>
+      </div>
+    </div> -->
 
+    <vs-row>
+      <vs-col vs-offset="10" v-tooltip="'col - 1'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="1">
+        <div class="vx-col sm:w-1/5 w-full ml-auto" v-if="!poll">
+          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll">Poll</vs-button>
+        </div>
+      </vs-col>
+    </vs-row>
+
+    <div class="vx-row">
+      <FormLayouts v-if="poll" />
       <div class="vx-col w-full lg:w-1/4 mb-base height">
           <vx-card>
               <div slot="no-body">
@@ -84,10 +98,12 @@ import VueApexCharts from "vue-apexcharts";
 import StatisticsCardLine from "@/components/statistics-cards/StatisticsCardLine.vue";
 import analyticsData from "./ui-elements/card/analyticsData.js";
 import ChangeTimeDurationDropdown from "@/components/ChangeTimeDurationDropdown.vue";
+import FormLayouts from "./forms/FormLayouts.vue";
 
 export default {
   data() {
     return {
+      poll: false,
       analyticsData: analyticsData,
       isImp: false,
       navbarSearchAndPinList: this.$store.state.navbarSearchAndPinList,
@@ -165,7 +181,8 @@ export default {
   components: {
     VueApexCharts,
     StatisticsCardLine,
-    ChangeTimeDurationDropdown
+    ChangeTimeDurationDropdown,
+    FormLayouts
   },  
   methods: {
         toggleInfoWindow: function(marker, idx) {

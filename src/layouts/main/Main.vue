@@ -33,7 +33,7 @@
 
             <div class="content-wrapper">
 
-                <the-navbar :navbarColor="navbarColor" :class="[{'text-white': isNavbarDark && !isThemeDark}, {'text-base': !isNavbarDark && isThemeDark}]" />
+                <!-- <the-navbar :navbarColor="navbarColor" :class="[{'text-white': isNavbarDark && !isThemeDark}, {'text-base': !isNavbarDark && isThemeDark}]" /> -->
 
                 <div class="router-view">
                     <div class="router-content" :class="{'mt-0': navbarType == 'hidden'}">

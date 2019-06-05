@@ -385,13 +385,13 @@ export default [
   //     },
   //   ]
   // },
-  {
-    url: '/forms/form-layouts',
-    name: "Poll",
-    icon: "PackageIcon",
-    slug: "formsFormLayouts",
-    i18n: "Poll",
-  },
+  // {
+  //   url: '/forms/form-layouts',
+  //   name: "Poll",
+  //   icon: "PackageIcon",
+  //   slug: "formsFormLayouts",
+  //   i18n: "Poll",
+  // },
   // {
   //   url: '/forms/form-wizard',
   //   name: "Form Wizard",

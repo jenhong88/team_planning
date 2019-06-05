@@ -83,7 +83,7 @@ export default {
             infoWinOpen: false,
             currentMidx: null,
             //optional: offset infowindow so it visually sits nicely on top of our marker
-            mapStyle: {styles:[
+            mapStyle: { styles:[
                 {
                     "featureType": "landscape.natural",
                     "elementType": "geometry.fill",

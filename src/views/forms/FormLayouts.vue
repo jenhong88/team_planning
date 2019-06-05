@@ -1,6 +1,5 @@
 <template>
 	<div class="vx-row">
-
 		<!-- HORIZONTAL LAYOUT -->
 		<div class="vx-col md:w-1/1 w-full mb-base">
 			<vx-card title="Send a poll">
@@ -8,10 +7,10 @@
 					<div class="vx-col sm:w-1/5 w-full">
 						<span>Activity #1</span>
 					</div>
-					<div class="vx-col sm:w-4/5 w-full">
+					<div class="vx-col sm:w-3/5 w-full">
 						<vs-input class="w-full" v-model="input1" />
 					</div>
-				</div>
+				<!-- </div> -->
 				<!-- <div class="vx-row mb-6">
 					<div class="vx-col sm:w-1/5 w-full">
 						<span>Activity #2</span>
@@ -41,9 +40,9 @@
 						<vs-checkbox class="inline-flex" v-model="check1">Remember Me</vs-checkbox>
 					</div>
 				</div> -->
-				<div class="vx-row">
-					<div class="vx-col sm:w-2/3 w-full ml-auto">
-						<vs-button class="mr-3 mb-2">Send</vs-button>
+				<!-- <div class="vx-row"> -->
+					<div class="vx-col sm:w-1/5 w-full ml-auto">
+						<vs-button class="mr-3 mb-2" v-on:click="poll=!poll">Send</vs-button>
 						<!-- <vs-button color="warning" type="border" class="mb-2" @click="input1 = input2 = input3 = input4 = input4 = ''; check1 = false;">Reset</vs-button> -->
 					</div>
 				</div>
