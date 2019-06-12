@@ -5,7 +5,7 @@
 			<vx-card title="Send a poll">
 				<div class="vx-row mb-6">
 					<div class="vx-col sm:w-1/5 w-full">
-						<span>Activity #1</span>
+						<span>Question #1</span>
 					</div>
 					<div class="vx-col sm:w-3/5 w-full">
 						<vs-input class="w-full" v-model="input1" />
@@ -112,7 +112,7 @@ export default{
 			check5: '',
 			check6: '',
 			check7: '',
-			input1: 'Africa',
+			input1: '',
 			input2: 'Budapest',
 			input3: 'Thailand',
 			input4: 'New York',
