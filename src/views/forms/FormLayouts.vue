@@ -102,6 +102,9 @@
 </template>
 
 <script>
+import activitiesData from '@/firebase/firebaseConfig';
+
+
 export default{
 	data() {
 		return {

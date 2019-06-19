@@ -25,15 +25,16 @@ Vue.prototype.$http = axios
 // Theme Configurations
 import '../themeConfig.js'
 
-
 // Algolia - Instant Search
 import InstantSearch from 'vue-instantsearch';
 Vue.use(InstantSearch);
 
+// Vue Resource
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
 
 // Firebase
 import '@/firebase/firebaseConfig'
-
 
 // Auth0 Plugin
 import AuthPlugin from "./plugins/auth";

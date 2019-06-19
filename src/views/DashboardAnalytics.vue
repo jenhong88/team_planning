@@ -23,7 +23,9 @@
       </vs-col>
     </vs-row>
 
-    <div class="vx-row">
+    here{{test}}here
+
+    <!-- <div class="vx-row">
       <FormLayouts v-if="poll" />
       <div class="vx-col w-full lg:w-1/4 mb-base height">
           <vx-card>
@@ -87,7 +89,7 @@
                   <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_3.vote_no++}">No</vs-button>
               </div>
           </vx-card>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -99,10 +101,23 @@ import StatisticsCardLine from "@/components/statistics-cards/StatisticsCardLine
 import analyticsData from "./ui-elements/card/analyticsData.js";
 import ChangeTimeDurationDropdown from "@/components/ChangeTimeDurationDropdown.vue";
 import FormLayouts from "./forms/FormLayouts.vue";
+import axios from 'axios'
+
+
+
+axios.get('https://maenan-241423.firebaseio.com/activities.json')
+  .then(function (response) {
+    test = response
+    // console.log('HERE ===> ', response)
+  })
+  .catch(function (error) {
+    // Error Occurred
+  });
 
 export default {
   data() {
     return {
+      test: '',
       poll: false,
       analyticsData: analyticsData,
       isImp: false,
@@ -183,7 +198,16 @@ export default {
     StatisticsCardLine,
     ChangeTimeDurationDropdown,
     FormLayouts
-  },  
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      console.log('LOADED')
+      this.$http.get("https://maenan-241423.firebaseio.com/activities.json")
+        .then(response => {
+          console.log(response.json())
+        })
+    })
+  },
   methods: {
         toggleInfoWindow: function(marker, idx) {
             this.infoWindowPos = marker.position;
