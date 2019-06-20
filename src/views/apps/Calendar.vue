@@ -13,7 +13,7 @@
         
     <div class="vx-card app-fixed-height">
         <VuePerfectScrollbar class="scroll-area" :settings="settings">
-        <full-calendar class="w-full select-none" :events="calendarEvents" locale="en" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
+        <full-calendar class="w-full select-none" :events="activities" locale="en" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
 
             <!-- HEADER LEFT -->
 <!--             <div slot="fc-header-left" class="flex flex-wrap sm:justify-start justify-center">
@@ -141,22 +141,35 @@ import VuePerfectScrollbar from 'vue-perfect-scrollbar';
 export default {
     data() {
         return {
-            title: '',
-            start: '',
-            end: '',
-            desc: '',
-            id: 0,
-            disabledFrom: false,
-            labelLocal: 'none',
-            settings: {
-                maxScrollbarLength: 60,
-                wheelSpeed: 0.30,
-            },
+            // title: '',
+            // start: '',
+            // end: '',
+            // desc: '',
+            // id: 0,
+            // disabledFrom: false,
+            // labelLocal: 'none',
+            // settings: {
+            //     maxScrollbarLength: 60,
+            //     wheelSpeed: 0.30,
+            // },
 
 
-            activePromptAddEvent: false,
-            activePromptEditEvent: false,
+            // activePromptAddEvent: false,
+            activities: ''
         }
+    },
+    mounted: function () {
+        this.$nextTick(function () {
+          this.$http.get("https://maenan-241423.firebaseio.com/activities.json")
+            .then(response => {
+              return response.json()
+            })
+            .then(data => {
+              console.log(data)
+              // data.map(event => event.events[0])
+              this.activities = data.map(event => event.events[0])
+            })
+        })
     },
     computed: {
         calendarEvents() {

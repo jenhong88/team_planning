@@ -9,85 +9,46 @@
 
 <template>
   <div id="dashboard-analytics">
-<!--     <div class="vx-row">
-      <div class="vx-col sm:w-1/5 w-full ml-auto" v-if="!poll">
-        <vs-button class="mr-3 mb-2" v-on:click="!poll">Send</vs-button>
-      </div>
-    </div> -->
-
-    <vs-row>
-      <vs-col vs-offset="10" v-tooltip="'col - 1'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="1">
-        <div class="vx-col sm:w-1/5 w-full ml-auto" v-if="!poll">
-          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll">Poll</vs-button>
-        </div>
-      </vs-col>
-    </vs-row>
-
-    <!-- here{{test}}here -->
+    <!-- <vs-row> -->
+      <!-- <vs-col vs-offset="10" v-tooltip="'col - 1'" vs-type="flex" vs-justify="center" vs-align="center" vs-w="1"> -->
+      <!-- </vs-col> -->
+    <!-- </vs-row> -->
 
     <div class="vx-row">
-      <FormLayouts v-if="poll" />
-      <div class="vx-col w-full lg:w-1/4 mb-base height">
-          <vx-card>
-              <div slot="no-body">
-                  <img :src="require(`@/assets/images/pages/${card_1.contentImg1}`)" alt="content-img" class="responsive card-img-top">
-              </div>
-              <h5 class="mb-2">{{ card_1.title }}</h5>
-              <p class="text-grey">Duration: {{ card_1.duration }}</p>
-              <p class="text-grey">Price: {{ card_1.price }}</p>
-              
-              <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_1.vote_yes++}">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_1.vote_no++}">No</vs-button>
-              </div>
-          </vx-card>
+      
+      <div class="vx-col sm:w-1/1 w-full" v-if="!poll">
+        <div class="vx-col sm:w-1/5 w-full ml-auto">
+          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll">Poll</vs-button>
+        </div>
       </div>
 
-      <div class="vx-col w-full lg:w-1/4 mb-base height">
+      <div v-if="poll" class="vx-col sm:w-1/1 w-full">
+        <div class="vx-col sm:w-1/5 w-full">
+          <span>Question #1</span>
+        </div>
+        <div class="vx-col sm:w-3/5 w-full">
+          <vs-input class="w-full" v-model="input1" />
+        </div>
+        <div class="vx-col sm:w-1/5 w-full ml-auto">
+          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll" @click="$vs.notify({title:'POLL SENT!',text:'Your party is notified of the poll!',color:'success',position:'top-right'})" >Send</vs-button>
+          <!-- <vs-button color="warning" type="border" class="mb-2" @click="input1 = input2 = input3 = input4 = input4 = ''; check1 = false;">Reset</vs-button> -->
+        </div>
+      </div>
+
+      <div class="vx-col w-full lg:w-1/4 mb-base height" v-for="activity in activities">
           <vx-card>
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_2.contentImg2}`)" alt="content-img" class="responsive card-img-top">
               </div>
-              <h5 class="mb-2">{{ card_2.title }}</h5>
-              <p class="text-grey">Duration: {{ card_2.duration }}</p>
-              <p class="text-grey">Price: {{ card_2.price }}</p>
-              
-              <div class="flex justify-between flex-wrap">
+              <h5 class="mb-2">{{ activity.title }}</h5>
+              <p class="text-grey">Duration: {{ activity.duration }} Hours</p>
+              <p class="text-grey">Location: {{ activity.location }}</p>
+              <p class="text-grey">Price: ${{ activity.price }}</p>
+
+              <!-- <div class="flex justify-between flex-wrap">
                   <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_2.vote_yes++}">Yes</vs-button>
                   <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_2.vote_no++}">No</vs-button>
-              </div>
-          </vx-card>
-      </div>
-
-      <div class="vx-col w-full lg:w-1/4 mb-base height">
-          <vx-card>
-              <div slot="no-body">
-                  <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">
-              </div>
-              <h5 class="mb-2">{{ card_3.title }}</h5>
-              <p class="text-grey">Duration: {{ card_3.duration }}</p>
-              <p class="text-grey">Price: {{ card_3.price }}</p>
-              
-              <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_3.vote_yes++}">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_3.vote_no++}">No</vs-button>
-              </div>
-          </vx-card>
-      </div>
-
-      <div class="vx-col w-full lg:w-1/4 mb-base height">
-          <vx-card>
-              <div slot="no-body">
-                  <img :src="require(`@/assets/images/pages/${card_3.contentImg3}`)" alt="content-img" class="responsive card-img-top">
-              </div>
-              <h5 class="mb-2">{{ card_3.title }}</h5>
-              <p class="text-grey">Duration: {{ card_3.subtitle }}</p>
-              <p class="text-grey">Price: {{ card_3.subtitle }}</p>
-              
-              <div class="flex justify-between flex-wrap">
-                  <vs-button class="mt-4 shadow-lg" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC" v-on:click="()=>{this.card_3.vote_yes++}">Yes</vs-button>
-                  <vs-button class="mt-4" type="border" color="#b9b9b9" v-on:click="()=>{this.card_3.vote_no++}">No</vs-button>
-              </div>
+              </div> -->
           </vx-card>
       </div>
 
@@ -109,6 +70,7 @@ export default {
       test: '',
       poll: false,
       analyticsData: analyticsData,
+      activities: '',
       isImp: false,
       navbarSearchAndPinList: this.$store.state.navbarSearchAndPinList,
       show: false,
@@ -191,7 +153,7 @@ export default {
         })
         .then(data => {
           console.log(data)
-          this.card_1.title = data.title
+          this.activities = data
         })
     })
   },
