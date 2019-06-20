@@ -30,7 +30,7 @@
           <vs-input class="w-full" v-model="input1" />
         </div>
         <div class="vx-col sm:w-1/5 w-full ml-auto">
-          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll" @click="$vs.notify({title:'POLL SENT!',text:'Your party is notified of the poll!',color:'success',position:'top-right'})" >Send</vs-button>
+          <vs-button class="mr-3 mb-2" v-on:click="poll=!poll" @click="$vs.notify({title:'POLL SENT!',text:'Your party is notified of the poll!',color:'success',position:'top-right'})" >SHARE</vs-button>
           <!-- <vs-button color="warning" type="border" class="mb-2" @click="input1 = input2 = input3 = input4 = input4 = ''; check1 = false;">Reset</vs-button> -->
         </div>
       </div>
@@ -38,7 +38,7 @@
       <div class="vx-col w-full lg:w-1/4 mb-base height" v-for="activity in activities">
           <vx-card>
               <div slot="no-body">
-                  <img :src="require(`@/assets/images/pages/${card_2.contentImg2}`)" alt="content-img" class="responsive card-img-top">
+                  <img :src="require(`@/assets/images/pages/${card_1.contentImg1}`)" alt="content-img" class="responsive card-img-top">
               </div>
               <h5 class="mb-2">{{ activity.title }}</h5>
               <p class="text-grey">Duration: {{ activity.duration }} Hours</p>
@@ -105,7 +105,7 @@ export default {
         }
       ],
       card_1: {
-                contentImg1: 'demo_1.jpg',
+                contentImg1: 'demo_4.jpg',
                 title: '',
                 duration: '',
                 price: ''

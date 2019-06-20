@@ -71,7 +71,7 @@ export default [
     name: "Calendar",
     slug: "calendar",
     icon: "CalendarIcon",
-    i18n: "Calendar",
+    i18n: "Group Calendar",
   },
   // {
   //   url: null,
@@ -572,7 +572,7 @@ export default [
     name: "Google Map",
     icon: "MapIcon",
     slug: "extraComponentMapsGoogleMap",
-    i18n: "GoogleMap",
+    i18n: "Map",
   },
   // {
   //   header: "Extensions",
