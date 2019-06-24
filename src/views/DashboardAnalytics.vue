@@ -69,6 +69,7 @@ export default {
     return {
       test: '',
       poll: false,
+      polling: null,
       analyticsData: analyticsData,
       activities: '',
       isImp: false,
@@ -144,15 +145,21 @@ export default {
     ChangeTimeDurationDropdown,
     FormLayouts
   },
+  beforeDestroy () {
+    clearInterval(this.polling)
+  },
+  created () {
+    this.pollData()
+  },
   mounted: function () {
     this.$nextTick(function () {
-      console.log('LOADED')
+      // console.log('LOADED')
       this.$http.get("https://maenan-241423.firebaseio.com/activities.json")
         .then(response => {
           return response.json()
         })
         .then(data => {
-          console.log(data)
+          // console.log(data)
           this.activities = data
         })
     })
@@ -171,9 +178,17 @@ export default {
                 this.currentMidx = idx;
             }
         },
-        voteYes: (tile) => {
-          let tileId = `this.${tile}`
-          this.card_1[0].vote_yes++
+        pollData () {
+          this.polling = setInterval(() => {
+            this.$http.get("https://maenan-241423.firebaseio.com/activities.json")
+              .then(response => {
+                return response.json()
+              })
+              .then(data => {
+                // console.log(data)
+                this.activities = data
+              })
+          }, 10000)
         }
     }
 };
