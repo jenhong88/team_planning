@@ -13,7 +13,7 @@
         
     <div class="vx-card app-fixed-height">
         <VuePerfectScrollbar class="scroll-area" :settings="settings">
-        <full-calendar class="w-full select-none" :events="activities" locale="en" :setMonth="7" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
+        <full-calendar class="w-full select-none" :events="activities" locale="en" :setMonth="9" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
 
             <!-- HEADER LEFT -->
 <!--             <div slot="fc-header-left" class="flex flex-wrap sm:justify-start justify-center">
