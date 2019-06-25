@@ -13,7 +13,7 @@
         
     <div class="vx-card app-fixed-height">
         <VuePerfectScrollbar class="scroll-area" :settings="settings">
-        <full-calendar class="w-full select-none" :events="activities" locale="en" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
+        <full-calendar class="w-full select-none" :events="activities" locale="en" :setMonth="7" @dayClick ="openAddNewEvent" @eventClick="openEditEvent">
 
             <!-- HEADER LEFT -->
 <!--             <div slot="fc-header-left" class="flex flex-wrap sm:justify-start justify-center">
@@ -142,20 +142,20 @@ export default {
     data() {
         return {
             polling: null,
-            // title: '',
-            // start: '',
-            // end: '',
-            // desc: '',
-            // id: 0,
-            // disabledFrom: false,
-            // labelLocal: 'none',
+            title: '',
+            start: '',
+            end: '',
+            desc: '',
+            id: 0,
+            disabledFrom: false,
+            labelLocal: 'none',
             settings: {
                 maxScrollbarLength: 60,
                 wheelSpeed: 0.30,
             },
 
 
-            // activePromptAddEvent: false,
+            activePromptAddEvent: false,
             activities: ''
         }
     },
@@ -172,9 +172,7 @@ export default {
               return response.json()
             })
             .then(data => {
-              console.log(data)
-              // data.map(event => event.events[0])
-              this.activities = data.map(event => event.events[0])
+              this.activities = data
             })
         })
     },
@@ -252,8 +250,7 @@ export default {
                 return response.json()
               })
               .then(data => {
-                console.log('HERE ==> ', data)
-                this.activities = data.map(event => event.events[0])
+                this.activities = data
               })
           }, 10000)
         }

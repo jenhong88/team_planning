@@ -14,7 +14,7 @@
         <!-- <p>A basic example of using a single infowindow for 3 markers</p> -->
 
         <div class="mt-5">
-            <gmap-map :center="center" v-bind:options="mapStyle" :zoom="3" :setMonth="6" style="width: 100%; height: 700px">
+            <gmap-map :center="center" v-bind:options="mapStyle" :zoom="3" style="width: 100%; height: 700px">
                 <gmap-info-window :options="infoOptions" :position="infoWindowPos" :opened="infoWinOpen" @closeclick="infoWinOpen=false">
                     {{infoContent}}
                 </gmap-info-window>
