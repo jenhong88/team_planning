@@ -141,7 +141,7 @@ import VuePerfectScrollbar from 'vue-perfect-scrollbar';
 export default {
     data() {
         return {
-            polling: null
+            polling: null,
             // title: '',
             // start: '',
             // end: '',
@@ -149,10 +149,10 @@ export default {
             // id: 0,
             // disabledFrom: false,
             // labelLocal: 'none',
-            // settings: {
-            //     maxScrollbarLength: 60,
-            //     wheelSpeed: 0.30,
-            // },
+            settings: {
+                maxScrollbarLength: 60,
+                wheelSpeed: 0.30,
+            },
 
 
             // activePromptAddEvent: false,
@@ -252,7 +252,7 @@ export default {
                 return response.json()
               })
               .then(data => {
-                // console.log(data)
+                console.log('HERE ==> ', data)
                 this.activities = data.map(event => event.events[0])
               })
           }, 10000)
