@@ -141,6 +141,7 @@ import VuePerfectScrollbar from 'vue-perfect-scrollbar';
 export default {
     data() {
         return {
+            polling: null
             // title: '',
             // start: '',
             // end: '',
@@ -157,6 +158,12 @@ export default {
             // activePromptAddEvent: false,
             activities: ''
         }
+    },
+    beforeDestroy () {
+        clearInterval(this.polling)
+    },
+    created () {
+        this.pollData()
     },
     mounted: function () {
         this.$nextTick(function () {
@@ -238,6 +245,18 @@ export default {
         removeEvent() {
             this.$store.dispatch('calendar/removeCalendarEvent', this.id)
         },
+        pollData () {
+          this.polling = setInterval(() => {
+            this.$http.get("https://maenan-241423.firebaseio.com/activities.json")
+              .then(response => {
+                return response.json()
+              })
+              .then(data => {
+                // console.log(data)
+                this.activities = data.map(event => event.events[0])
+              })
+          }, 10000)
+        }
     },
     components: {
         'full-calendar': require('vue-fullcalendar'),
