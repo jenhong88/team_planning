@@ -35,8 +35,8 @@
         </div>
       </div>
 
-      <div class="vx-col w-full lg:w-1/4 mb-base height" v-for="(activity, index) in activities">
-          <vx-card v-bind:key="index">
+      <div class="vx-col w-full lg:w-1/4 mb-base height" v-for="(activity, index) in activities" v-bind:key="index">
+          <vx-card>
               <div slot="no-body">
                   <img :src="require(`@/assets/images/pages/${card_1.contentImg1}`)" alt="content-img" class="responsive card-img-top">
               </div>
@@ -62,7 +62,6 @@ import StatisticsCardLine from "@/components/statistics-cards/StatisticsCardLine
 import analyticsData from "./ui-elements/card/analyticsData.js";
 import ChangeTimeDurationDropdown from "@/components/ChangeTimeDurationDropdown.vue";
 import FormLayouts from "./forms/FormLayouts.vue";
-import axios from 'axios'
 
 export default {
   data() {
